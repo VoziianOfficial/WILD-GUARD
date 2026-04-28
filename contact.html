@@ -487,16 +487,17 @@
             <div class="container">
                 <div class="contact-main-layout">
                     <div class="contact-info-panel" data-aos="fade-right">
-                        <span class="section-eyebrow">Contact options</span>
-                        <h2>Start with a simple request.</h2>
-
-                        <p>
-                            Use the form to describe animal activity, visible signs, or possible entry points. You can
-                            also call or email to begin a provider-matching request.
-                        </p>
+                        <div class="contact-info-head">
+                            <span class="section-eyebrow">Contact options</span>
+                            <h2>Start your request in one minute.</h2>
+                            <p>
+                                Share what you noticed and we will help you compare local providers. You can also call
+                                or email directly.
+                            </p>
+                        </div>
 
                         <div class="contact-methods">
-                            <a href="tel:+18665550148" data-phone-link>
+                            <a class="contact-method-card" href="tel:+18665550148" data-phone-link>
                                 <i data-lucide="phone"></i>
                                 <div>
                                     <span>Phone</span>
@@ -504,7 +505,7 @@
                                 </div>
                             </a>
 
-                            <a href="mailto:support@wildguardhome.com" data-email-link>
+                            <a class="contact-method-card" href="mailto:support@wildguardhome.com" data-email-link>
                                 <i data-lucide="mail"></i>
                                 <div>
                                     <span>Email</span>
@@ -512,7 +513,7 @@
                                 </div>
                             </a>
 
-                            <div>
+                            <div class="contact-method-card">
                                 <i data-lucide="map-pin"></i>
                                 <div>
                                     <span>Service area</span>
@@ -521,20 +522,23 @@
                             </div>
                         </div>
 
-                        <div class="contact-verify-box">
-                            <i data-lucide="clipboard-check"></i>
-                            <div>
-                                <strong>Before hiring any provider</strong>
-                                <p>
-                                    Ask about required licensing, insurance, inspection fees, humane methods, written
-                                    quote details, exclusion work, and follow-up terms.
-                                </p>
-                            </div>
-                        </div>
+                        <ul class="contact-highlights" aria-label="Why people use this form">
+                            <li>
+                                <i data-lucide="clock-3"></i>
+                                <span>Fast request flow</span>
+                            </li>
+                            <li>
+                                <i data-lucide="shield-check"></i>
+                                <span>Compare licensed providers</span>
+                            </li>
+                            <li>
+                                <i data-lucide="clipboard-check"></i>
+                                <span>Clear quotes and follow-up terms</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <form class="form-card contact-form" action="#" method="post" data-contact-form
-                        data-aos="fade-left">
+                    <form class="form-card contact-form" action="#" method="post" data-contact-form>
                         <div class="form-card-head">
                             <span>Matching request</span>
                             <h3 id="contactFormTitle">Compare Local Providers</h3>
