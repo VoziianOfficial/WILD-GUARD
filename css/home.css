@@ -2940,3 +2940,169 @@ body {
     box-shadow: 0 0 0 100vmax var(--color-card);
     clip-path: inset(0 -100vmax);
 }
+
+/* ==================================================
+   WILDLIFE PNG ICON ANIMATION
+   Calm premium motion for animal PNG icons
+   ================================================== */
+
+.wildlife-type-card {
+    position: relative;
+    cursor: default;
+    transform: translateY(0);
+    animation: wildlifeCardReveal 0.75s ease both;
+}
+
+.wildlife-type-card:nth-child(1) {
+    animation-delay: 0.03s;
+}
+
+.wildlife-type-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.wildlife-type-card:nth-child(3) {
+    animation-delay: 0.13s;
+}
+
+.wildlife-type-card:nth-child(4) {
+    animation-delay: 0.18s;
+}
+
+.wildlife-type-card:nth-child(5) {
+    animation-delay: 0.23s;
+}
+
+.wildlife-type-card:nth-child(6) {
+    animation-delay: 0.28s;
+}
+
+.wildlife-type-icon {
+    position: relative;
+    overflow: visible;
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+}
+
+.wildlife-type-icon::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 162, 118, 0.16), transparent 68%);
+    opacity: 0;
+    transform: scale(0.82);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.wildlife-type-icon img {
+    transform-origin: center bottom;
+    animation: wildlifeSoftFloat 4.8s ease-in-out infinite;
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+/* разные задержки, чтобы PNG не двигались одинаково */
+.wildlife-type-card:nth-child(1) .wildlife-type-icon img {
+    animation-delay: 0s;
+}
+
+.wildlife-type-card:nth-child(2) .wildlife-type-icon img {
+    animation-delay: 0.35s;
+}
+
+.wildlife-type-card:nth-child(3) .wildlife-type-icon img {
+    animation-delay: 0.7s;
+}
+
+.wildlife-type-card:nth-child(4) .wildlife-type-icon img {
+    animation-delay: 1.05s;
+}
+
+.wildlife-type-card:nth-child(5) .wildlife-type-icon img {
+    animation-delay: 1.4s;
+}
+
+.wildlife-type-card:nth-child(6) .wildlife-type-icon img {
+    animation-delay: 1.75s;
+}
+
+/* hover эффект */
+.wildlife-type-card:hover .wildlife-type-icon {
+    transform: translateY(-6px) scale(1.04);
+    background: #ffffff;
+    box-shadow:
+        0 18px 34px rgba(38, 51, 33, 0.12),
+        inset 0 0 0 1px rgba(139, 162, 118, 0.2);
+}
+
+.wildlife-type-card:hover .wildlife-type-icon::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.wildlife-type-card:hover .wildlife-type-icon img {
+    transform: translateY(-3px) scale(1.08) rotate(-2deg);
+    filter: saturate(1.08) contrast(1.03);
+}
+
+.wildlife-type-card:hover span {
+    color: var(--color-dark);
+}
+
+/* подписи тоже чуть живые */
+.wildlife-type-card span {
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.wildlife-type-card:hover span {
+    transform: translateY(-2px);
+}
+
+/* анимации */
+@keyframes wildlifeSoftFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-4px) rotate(1deg);
+    }
+}
+
+@keyframes wildlifeCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* уважение к reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .wildlife-type-card,
+    .wildlife-type-icon img {
+        animation: none;
+    }
+
+    .wildlife-type-card:hover .wildlife-type-icon,
+    .wildlife-type-card:hover .wildlife-type-icon img,
+    .wildlife-type-card:hover span {
+        transform: none;
+    }
+}
