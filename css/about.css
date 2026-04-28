@@ -982,3 +982,44 @@
         font-size: clamp(36px, 12vw, 52px);
     }
 }
+
+/* ==================================================
+   ABOUT PAGE — REDUCE SECTION GAPS
+   ================================================== */
+
+.about-page main>section {
+    margin: 0 !important;
+}
+
+.about-page .section {
+    padding-block: clamp(28px, 3.8vw, 52px) !important;
+}
+
+.about-page .section-sm {
+    padding-block: clamp(20px, 2.8vw, 36px) !important;
+}
+
+/* hero не трогаем */
+.about-page .about-hero.section {
+    padding: 0 !important;
+}
+
+/* CTA и FAQ чуть плотнее */
+.about-page .about-cta.section-sm,
+.about-page .faq-section.section-sm {
+    padding-block: clamp(18px, 2.4vw, 30px) !important;
+}
+
+@media (max-width: 560px) {
+    .about-page .section {
+        padding-block: 24px !important;
+    }
+
+    .about-page .section-sm {
+        padding-block: 18px !important;
+    }
+
+    .about-page .about-hero.section {
+        padding: 0 !important;
+    }
+}
