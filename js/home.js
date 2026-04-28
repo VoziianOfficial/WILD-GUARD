@@ -6,10 +6,10 @@
    ================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    initWildlifeSlider();
     initHeroMotion();
     initServiceCardsTilt();
     initEntryPointMotion();
+    initHomeServicesSwiper();
 });
 
 /* ==================================================
@@ -187,9 +187,6 @@ function initEntryPointMotion() {
    HOME SERVICES SWIPER ON TABLET / MOBILE
    ================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-    initHomeServicesSwiper();
-});
 
 let homeServicesSwiper = null;
 
@@ -204,25 +201,41 @@ function initHomeServicesSwiper() {
         if (homeServicesSwiper) return;
 
         homeServicesSwiper = new Swiper(slider, {
-            slidesPerView: 1.08,
-            spaceBetween: 14,
-            speed: 650,
+            loop: true,
+            speed: 700,
             grabCursor: true,
-            watchOverflow: true,
+            watchOverflow: false,
+
+            autoplay: {
+                delay: 2600,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+
             pagination: {
                 el: ".home-services-pagination",
                 clickable: true,
             },
+
             navigation: {
                 nextEl: ".home-services-next",
                 prevEl: ".home-services-prev",
             },
+
             breakpoints: {
-                560: {
-                    slidesPerView: 1.35,
-                    spaceBetween: 16,
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 12,
                 },
-                820: {
+                560: {
+                    slidesPerView: 1,
+                    spaceBetween: 14,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 14,
+                },
+                980: {
                     slidesPerView: 2.15,
                     spaceBetween: 16,
                 },
@@ -246,6 +259,5 @@ function initHomeServicesSwiper() {
     };
 
     checkMode();
-
     breakpoint.addEventListener("change", checkMode);
 }
