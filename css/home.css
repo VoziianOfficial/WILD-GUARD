@@ -3106,3 +3106,118 @@ body {
         transform: none;
     }
 }
+
+/* ==================================================
+   FAQ SMOOTH ACCORDION
+   ================================================== */
+
+.faq-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-list details {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 12px 30px rgba(38, 51, 33, 0.05);
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease,
+        height 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-list details+details {
+    margin-top: 10px;
+}
+
+.faq-list details:hover {
+    transform: translateY(-2px);
+    border-color: rgba(63, 79, 55, 0.18);
+    background: var(--color-card);
+    box-shadow: 0 18px 42px rgba(38, 51, 33, 0.08);
+}
+
+.faq-list details[open] {
+    background:
+        radial-gradient(circle at 95% 10%, rgba(221, 232, 212, 0.82), transparent 34%),
+        var(--color-card);
+    border-color: rgba(63, 79, 55, 0.2);
+}
+
+.faq-list summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 20px;
+    color: var(--color-dark-deep);
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.35;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary svg {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--color-bg-soft);
+    color: var(--color-dark);
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+.faq-list details[open] summary svg {
+    transform: rotate(45deg);
+    background: var(--color-dark);
+    color: var(--color-text-light);
+}
+
+.faq-list details p {
+    margin: 0;
+    padding: 0 20px 18px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 1.65;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition:
+        opacity 0.32s ease,
+        transform 0.32s ease;
+}
+
+.faq-list details[open] p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 560px) {
+    .faq-list summary {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .faq-list summary svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .faq-list details p {
+        padding: 0 16px 16px;
+        font-size: 13px;
+    }
+}

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initServiceCardsTilt();
     initEntryPointMotion();
     initHomeServicesSwiper();
+    initSmoothFaq();
 });
 
 /* ==================================================
@@ -260,4 +261,63 @@ function initHomeServicesSwiper() {
 
     checkMode();
     breakpoint.addEventListener("change", checkMode);
+}
+
+/* ==================================================
+   SMOOTH FAQ ACCORDION
+   ================================================== */
+
+function initSmoothFaq() {
+    const items = document.querySelectorAll(".faq-list details");
+
+    if (!items.length) return;
+
+    items.forEach((details) => {
+        const summary = details.querySelector("summary");
+
+        if (!summary) return;
+
+        details.style.height = details.open ? `${details.scrollHeight}px` : `${summary.offsetHeight}px`;
+
+        summary.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const isOpen = details.open;
+            const summaryHeight = summary.offsetHeight;
+
+            details.style.overflow = "hidden";
+
+            if (isOpen) {
+                details.style.height = `${details.scrollHeight}px`;
+
+                requestAnimationFrame(() => {
+                    details.style.height = `${summaryHeight}px`;
+                });
+
+                details.addEventListener(
+                    "transitionend",
+                    () => {
+                        details.open = false;
+                        details.style.height = "";
+                    },
+                    { once: true }
+                );
+            } else {
+                details.open = true;
+                details.style.height = `${summaryHeight}px`;
+
+                requestAnimationFrame(() => {
+                    details.style.height = `${details.scrollHeight}px`;
+                });
+
+                details.addEventListener(
+                    "transitionend",
+                    () => {
+                        details.style.height = "";
+                    },
+                    { once: true }
+                );
+            }
+        });
+    });
 }
