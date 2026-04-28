@@ -1694,3 +1694,63 @@
         font-size: 12px;
     }
 }
+
+/* ==================================================
+   TABLET / MOBILE FIXES
+   ================================================== */
+
+@media (max-width: 980px) {
+
+    /* убрать compare-framework на планшете и телефоне */
+    .services-page .compare-framework.section {
+        display: none !important;
+    }
+
+    /* services hero — больше места и центр */
+    .services-page .services-hero-inner {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        min-height: 560px !important;
+        padding-block: 90px 42px !important;
+    }
+
+    .services-page .services-hero-copy {
+        max-width: 720px !important;
+        width: 100% !important;
+        margin-inline: auto !important;
+        padding: 0 22px !important;
+        text-align: center !important;
+    }
+
+    .services-page .services-hero-copy h1,
+    .services-page .services-hero-copy p {
+        margin-inline: auto !important;
+    }
+
+    .services-page .services-hero-actions {
+        justify-content: center !important;
+    }
+
+    .services-page .services-hero-panel {
+        display: none !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .services-page .services-hero-inner {
+        min-height: 540px !important;
+        padding-block: 88px 34px !important;
+    }
+
+    .services-page .services-hero-copy {
+        padding-inline: 18px !important;
+    }
+
+    .services-page .services-hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        max-width: 320px !important;
+        margin-inline: auto !important;
+    }
+}
