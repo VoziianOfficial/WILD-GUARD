@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initFaqIcons();
     initGlowCards();
     initSmoothAnchorScroll();
+
+    /* важно: готовим анимации ДО запуска AOS */
+    prepareAnimationElements();
     initLibraries();
 });
 
@@ -60,6 +63,7 @@ function applyGlobalConfig(config) {
     setText("[data-email-text]", company.email);
 
     const cookieBanner = document.querySelector("[data-cookie-banner]");
+
     if (cookieBanner && cookie) {
         const title = cookieBanner.querySelector(".cookie-content h2");
         const text = cookieBanner.querySelector(".cookie-content p");
@@ -72,12 +76,11 @@ function applyGlobalConfig(config) {
         if (decline) decline.textContent = cookie.declineText;
     }
 
-    const submitButtons = document.querySelectorAll(".form-submit");
-    submitButtons.forEach((button) => {
+    document.querySelectorAll(".form-submit, .wild-form-submit").forEach((button) => {
         button.innerHTML = `
-      ${config.forms.submitButtonText}
-      <i data-lucide="arrow-up-right"></i>
-    `;
+            ${config.forms.submitButtonText}
+            <i data-lucide="arrow-up-right"></i>
+        `;
     });
 }
 
@@ -109,11 +112,7 @@ function initHeaderScroll() {
     if (!header) return;
 
     const updateHeader = () => {
-        if (window.scrollY > 12) {
-            header.classList.add("is-scrolled");
-        } else {
-            header.classList.remove("is-scrolled");
-        }
+        header.classList.toggle("is-scrolled", window.scrollY > 12);
     };
 
     updateHeader();
@@ -143,6 +142,7 @@ function initMobileMenu() {
         toggle.setAttribute("aria-expanded", "true");
 
         const firstLink = menu.querySelector("a, button");
+
         if (firstLink) {
             setTimeout(() => firstLink.focus(), 80);
         }
@@ -262,7 +262,10 @@ function initForms(config) {
                 );
 
                 const firstInvalid = form.querySelector(".is-invalid");
-                if (firstInvalid) firstInvalid.focus();
+
+                if (firstInvalid) {
+                    firstInvalid.focus();
+                }
 
                 return;
             }
@@ -326,7 +329,7 @@ function initFaqIcons() {
 
 function initGlowCards() {
     const cards = document.querySelectorAll(
-        ".glow-card, .service-photo-card, .wildlife-card, .hero-trust-row article, .signs-list article, .match-mini-grid article"
+        ".glow-card, .service-photo-card, .wildlife-type-card, .hero-trust-mini article, .signal-cards article, .match-proof-row article"
     );
 
     cards.forEach((card) => {
@@ -371,6 +374,36 @@ function initSmoothAnchorScroll() {
 }
 
 /* ==================================================
+   ANIMATION PREPARE
+   Убираем двойные анимации, из-за которых контент дергается
+   ================================================== */
+
+function prepareAnimationElements() {
+    const heroItems = document.querySelectorAll(
+        ".home-hero-copy, .home-hero-photo"
+    );
+
+    heroItems.forEach((item) => {
+        item.removeAttribute("data-aos");
+        item.removeAttribute("data-aos-delay");
+        item.removeAttribute("data-aos-duration");
+        item.removeAttribute("data-aos-offset");
+    });
+
+    if (window.innerWidth <= 820) {
+        document.querySelectorAll("[data-aos-delay]").forEach((item) => {
+            item.removeAttribute("data-aos-delay");
+        });
+    }
+
+    if (window.innerWidth <= 560) {
+        document.querySelectorAll(".wildlife-type-card").forEach((item) => {
+            item.style.animationDelay = "0s";
+        });
+    }
+}
+
+/* ==================================================
    LIBRARIES
    ================================================== */
 
@@ -381,10 +414,17 @@ function initLibraries() {
 
     if (window.AOS) {
         window.AOS.init({
-            duration: 720,
+            duration: 600,
             easing: "ease-out-cubic",
             once: true,
-            offset: 80,
+            mirror: false,
+            offset: 60,
+            delay: 0,
+            disable: () => window.innerWidth < 560,
+        });
+
+        window.addEventListener("load", () => {
+            window.AOS.refreshHard();
         });
     }
 
