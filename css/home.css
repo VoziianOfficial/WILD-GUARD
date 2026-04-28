@@ -800,91 +800,6 @@
     line-height: 1.55;
 }
 
-/* ================= MATCH CTA FORM ================= */
-
-.home-match-section {
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 18% 18%, rgba(221, 232, 212, 0.72), transparent 30%),
-        var(--color-bg);
-}
-
-.match-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
-    gap: clamp(24px, 5vw, 64px);
-    align-items: center;
-}
-
-.match-copy h2 {
-    color: var(--color-dark-deep);
-    font-family: var(--font-heading);
-    font-size: clamp(46px, 7vw, 82px);
-    font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: -0.055em;
-}
-
-.match-copy>p {
-    max-width: 580px;
-    margin-top: 18px;
-    color: var(--color-text-muted);
-    font-size: 17px;
-    line-height: 1.75;
-}
-
-.match-mini-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    max-width: 650px;
-    margin-top: 28px;
-}
-
-.match-mini-grid article {
-    display: grid;
-    gap: 8px;
-    padding: 18px;
-    border: 1px solid var(--color-border);
-    border-radius: 26px;
-    background: rgba(255, 255, 255, 0.68);
-    box-shadow: 0 12px 28px rgba(38, 51, 33, 0.05);
-    transition:
-        transform var(--transition),
-        background var(--transition);
-}
-
-.match-mini-grid article:hover {
-    transform: translateY(-4px);
-    background: var(--color-card);
-}
-
-.match-mini-grid svg {
-    width: 42px;
-    height: 42px;
-    padding: 10px;
-    border-radius: 50%;
-    background: var(--color-dark);
-    color: var(--color-text-light);
-}
-
-.match-mini-grid strong {
-    color: var(--color-dark-deep);
-    font-size: 15px;
-    line-height: 1.25;
-}
-
-.match-mini-grid span {
-    color: var(--color-text-muted);
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.match-form {
-    padding: clamp(20px, 3vw, 28px);
-}
-
 /* ================= FINAL CTA ================= */
 
 .final-cta {
@@ -2047,4 +1962,931 @@
         width: 48px;
         height: 48px;
     }
+}
+
+/* ================= MATCH CTA FORM ================= */
+
+.home-match-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding-block: clamp(34px, 5vw, 62px);
+    background: var(--color-dark-deep);
+}
+
+.home-match-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(90deg, rgba(38, 51, 33, 0.94) 0%, rgba(38, 51, 33, 0.78) 44%, rgba(38, 51, 33, 0.52) 100%),
+        url("../assets/images/home/home-match-bg.jpg") center/cover no-repeat;
+    transform: scale(1.02);
+}
+
+.home-match-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(221, 232, 212, 0.16), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(139, 162, 118, 0.18), transparent 28%);
+}
+
+.home-match-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.09;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(247, 246, 241, 0.32) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(247, 246, 241, 0.32) 1px, transparent 1px);
+    background-size: 58px 58px;
+}
+
+.match-shell {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(390px, 0.72fr);
+    gap: clamp(18px, 3vw, 34px);
+    align-items: stretch;
+    padding: clamp(14px, 2vw, 18px);
+    border: 1px solid rgba(247, 246, 241, 0.16);
+    border-radius: 38px;
+    background: rgba(247, 246, 241, 0.08);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.match-shell::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    width: 74px;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(221, 232, 212, 0.85);
+}
+
+.match-shell::after {
+    content: "";
+    position: absolute;
+    left: 108px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    box-shadow: 0 0 0 7px rgba(221, 232, 212, 0.1);
+}
+
+.match-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 430px;
+    padding: clamp(26px, 4vw, 48px);
+    border: 1px solid rgba(247, 246, 241, 0.12);
+    border-radius: 30px 30px 30px 86px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(139, 162, 118, 0.18), transparent 34%),
+        rgba(38, 51, 33, 0.54);
+}
+
+.match-copy .section-kicker {
+    width: fit-content;
+    border-color: rgba(247, 246, 241, 0.22);
+    background: rgba(247, 246, 241, 0.1);
+    color: rgba(247, 246, 241, 0.86);
+}
+
+.match-copy h2 {
+    max-width: 720px;
+    margin-top: 18px;
+    color: var(--color-text-light);
+    font-family: var(--font-heading);
+    font-size: clamp(44px, 6.5vw, 82px);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.match-copy>p {
+    max-width: 580px;
+    margin-top: 18px;
+    color: rgba(247, 246, 241, 0.76);
+    font-size: 15px;
+    line-height: 1.68;
+}
+
+.match-proof-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 650px;
+    margin-top: 24px;
+}
+
+.match-proof-row article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 11px;
+    align-items: start;
+    min-height: 96px;
+    padding: 14px;
+    border: 1px solid rgba(247, 246, 241, 0.13);
+    border-radius: 22px;
+    background: rgba(247, 246, 241, 0.08);
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+}
+
+.match-proof-row article:hover {
+    transform: translateY(-4px);
+    border-color: rgba(247, 246, 241, 0.24);
+    background: rgba(247, 246, 241, 0.12);
+}
+
+.match-proof-row svg {
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    border-radius: 50%;
+    background: var(--color-bg-soft);
+    color: var(--color-dark-deep);
+}
+
+.match-proof-row strong {
+    display: block;
+    color: var(--color-text-light);
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.match-proof-row span {
+    display: block;
+    margin-top: 3px;
+    color: rgba(247, 246, 241, 0.66);
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.match-soft-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    max-width: 620px;
+    margin-top: 14px;
+    padding: 11px 12px;
+    border: 1px solid rgba(247, 246, 241, 0.14);
+    border-radius: 18px;
+    background: rgba(247, 246, 241, 0.08);
+    color: rgba(247, 246, 241, 0.72);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.match-soft-note svg {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+}
+
+/* form */
+
+.match-form {
+    position: relative;
+    z-index: 1;
+    align-self: stretch;
+    min-height: 430px;
+    padding: clamp(18px, 2.6vw, 28px);
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 90% 8%, rgba(221, 232, 212, 0.9), transparent 32%),
+        rgba(247, 246, 241, 0.94);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(18px);
+}
+
+.match-form .form-card-head {
+    margin-bottom: 14px;
+}
+
+.match-form .form-card-head span {
+    color: var(--color-accent-hover);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.match-form .form-card-head h3 {
+    margin-top: 6px;
+    color: var(--color-dark-deep);
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 3.6vw, 44px);
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+}
+
+.match-form .form-card-head p {
+    max-width: 420px;
+    margin-top: 8px;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.match-form .form-grid {
+    gap: 10px;
+}
+
+.match-form .form-grid-compact {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    margin-top: 10px;
+}
+
+.match-form .form-field {
+    gap: 6px;
+}
+
+.match-form .form-field span {
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.match-form input,
+.match-form select,
+.match-form textarea {
+    min-height: 44px;
+    border-radius: 14px;
+    font-size: 13px;
+}
+
+.match-form textarea {
+    height: 78px;
+    min-height: 78px;
+    max-height: 78px;
+    resize: none;
+}
+
+.match-form .custom-check {
+    margin-top: 12px;
+    padding: 11px;
+    border-radius: 16px;
+    background: rgba(231, 237, 223, 0.54);
+}
+
+.match-form .custom-check>span:last-child {
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.match-form .form-submit {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 12px;
+    border-radius: 14px;
+}
+
+.match-form .form-disclaimer {
+    margin-top: 10px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+/* responsive */
+
+@media (max-width: 1120px) {
+    .match-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .match-copy,
+    .match-form {
+        min-height: auto;
+    }
+
+    .match-copy {
+        border-radius: 28px 28px 28px 68px;
+    }
+
+    .match-form .form-grid-compact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 820px) {
+    .home-match-section {
+        padding-block: 32px;
+    }
+
+    .match-shell {
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .match-copy {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .match-copy h2 {
+        font-size: clamp(40px, 10vw, 62px);
+    }
+
+    .match-proof-row {
+        grid-template-columns: 1fr;
+    }
+
+    .match-form {
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .home-match-section {
+        padding-block: 24px;
+    }
+
+    .match-shell {
+        border-radius: 24px;
+    }
+
+    .match-copy {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .match-copy h2 {
+        font-size: clamp(36px, 12vw, 50px);
+    }
+
+    .match-copy>p {
+        font-size: 13px;
+    }
+
+    .match-proof-row article {
+        min-height: auto;
+    }
+
+    .match-form {
+        padding: 16px;
+        border-radius: 20px;
+    }
+
+    .match-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-form textarea {
+        height: 72px;
+        min-height: 72px;
+        max-height: 72px;
+    }
+}
+
+
+/* ==================================================
+   HOME COMPACT SPACING OVERRIDE
+   Smaller section gaps + more harmonious page rhythm
+   Put this at the VERY END of home.css
+   ================================================== */
+
+.home-page main>section {
+    margin: 0;
+}
+
+/* Общий ритм секций */
+.home-page .section {
+    padding-block: clamp(34px, 4.2vw, 58px);
+}
+
+.home-page .section-sm {
+    padding-block: clamp(24px, 3vw, 40px);
+}
+
+/* ================= HERO COMPACT ================= */
+
+.home-hero-shell {
+    min-height: clamp(500px, 44vw, 630px);
+}
+
+.home-hero-copy {
+    padding:
+        clamp(42px, 5.8vw, 76px) clamp(28px, 5vw, 74px) clamp(28px, 4vw, 46px) max(clamp(18px, 4vw, 68px), calc((100vw - var(--container)) / 2 + 18px));
+}
+
+.home-hero-copy h1 {
+    font-size: clamp(42px, 4.9vw, 72px);
+}
+
+.home-hero-copy p {
+    margin-top: 16px;
+    line-height: 1.58;
+}
+
+.hero-actions {
+    margin-top: 22px;
+}
+
+.hero-trust-mini {
+    margin-top: clamp(24px, 3.4vw, 42px);
+}
+
+/* ================= WILDLIFE STRIP COMPACT ================= */
+
+.wildlife-strip.section-sm {
+    padding-block: 0;
+}
+
+.wildlife-strip-top {
+    padding: 8px 0 12px;
+}
+
+.wildlife-types-row {
+    margin-top: 12px;
+    gap: 10px;
+}
+
+.wildlife-type-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.wildlife-strip-bottom {
+    min-height: 0;
+}
+
+.wildlife-signs-block,
+.wildlife-entry-block {
+    min-height: 190px;
+    padding: 14px 18px 16px;
+}
+
+.wildlife-signs-block h3,
+.wildlife-entry-block h3 {
+    margin-bottom: 14px;
+    font-size: clamp(22px, 1.7vw, 27px);
+}
+
+.wildlife-signs-grid {
+    gap: 8px;
+}
+
+.wildlife-entry-layout {
+    gap: 12px;
+}
+
+/* ================= SERVICES COMPACT ================= */
+
+.home-services.section {
+    padding-block: clamp(26px, 3.2vw, 42px);
+}
+
+.home-services-heading {
+    margin-bottom: 12px;
+}
+
+.home-services-heading h2 {
+    font-size: clamp(32px, 4.3vw, 54px);
+}
+
+.home-services-heading p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.home-services-frame {
+    padding: 8px;
+    border-radius: 28px;
+}
+
+.home-services-grid {
+    grid-auto-rows: 158px;
+    gap: 8px;
+}
+
+.service-photo-card-content {
+    inset: auto 12px 12px 12px;
+}
+
+.service-photo-card-content h3 {
+    font-size: clamp(23px, 1.85vw, 30px);
+}
+
+.service-photo-card-content p {
+    font-size: 10.5px;
+    line-height: 1.38;
+}
+
+.service-card-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* ================= PROCESS COMPACT ================= */
+
+.process-section.section {
+    padding-block: clamp(34px, 4.2vw, 56px);
+}
+
+.process-shell {
+    gap: clamp(20px, 3.4vw, 46px);
+}
+
+.process-intro h2 {
+    font-size: clamp(38px, 5vw, 66px);
+}
+
+.process-intro p {
+    margin-top: 14px;
+    line-height: 1.62;
+}
+
+.process-intro .btn {
+    margin-top: 20px;
+}
+
+.process-timeline {
+    gap: 9px;
+}
+
+.process-timeline article {
+    min-height: 92px;
+    padding: 14px;
+    border-radius: 24px;
+}
+
+.process-number {
+    width: 40px;
+    height: 40px;
+}
+
+.process-timeline article>svg {
+    width: 38px;
+    height: 38px;
+}
+
+.process-timeline h3 {
+    font-size: 15px;
+}
+
+.process-timeline p {
+    font-size: 12px;
+    line-height: 1.42;
+}
+
+/* ================= SIGNS / MAP SECTION COMPACT ================= */
+
+.signs-section.section-sm {
+    padding-block: clamp(26px, 3.2vw, 42px);
+}
+
+.signal-board {
+    gap: 9px;
+    padding: 9px;
+    border-radius: 30px;
+}
+
+.signal-copy {
+    min-height: 250px;
+    padding: clamp(18px, 2.4vw, 28px);
+}
+
+.signal-copy h2 {
+    font-size: clamp(32px, 4vw, 54px);
+}
+
+.signal-copy p {
+    margin-top: 11px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.signal-copy-note {
+    margin-top: 14px;
+    padding: 10px;
+}
+
+.signal-map-card,
+.signal-photo-card {
+    min-height: 250px;
+}
+
+.signal-cards {
+    gap: 8px;
+}
+
+.signal-cards article {
+    min-height: 88px;
+    padding: 12px;
+    border-radius: 19px;
+}
+
+.signal-cards svg {
+    width: 34px;
+    height: 34px;
+}
+
+.signal-cards strong {
+    font-size: 13px;
+}
+
+.signal-cards span {
+    font-size: 11px;
+    line-height: 1.38;
+}
+
+/* ================= MATCH FORM COMPACT ================= */
+
+.home-match-section.section {
+    padding-block: clamp(30px, 4vw, 54px);
+}
+
+.match-shell {
+    gap: clamp(14px, 2.4vw, 26px);
+    padding: 12px;
+    border-radius: 32px;
+}
+
+.match-copy {
+    min-height: 380px;
+    padding: clamp(22px, 3vw, 38px);
+}
+
+.match-copy h2 {
+    margin-top: 14px;
+    font-size: clamp(40px, 5.6vw, 72px);
+}
+
+.match-copy>p {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.58;
+}
+
+.match-proof-row {
+    margin-top: 18px;
+}
+
+.match-proof-row article {
+    min-height: 82px;
+    padding: 12px;
+}
+
+.match-soft-note {
+    margin-top: 10px;
+}
+
+.match-form {
+    min-height: 380px;
+    padding: clamp(16px, 2.2vw, 24px);
+}
+
+.match-form .form-card-head {
+    margin-bottom: 10px;
+}
+
+.match-form .form-card-head h3 {
+    font-size: clamp(28px, 3vw, 38px);
+}
+
+.match-form .form-card-head p {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.match-form .form-grid {
+    gap: 8px;
+}
+
+.match-form input,
+.match-form select,
+.match-form textarea {
+    min-height: 40px;
+}
+
+.match-form textarea {
+    height: 68px;
+    min-height: 68px;
+    max-height: 68px;
+}
+
+.match-form .custom-check {
+    margin-top: 9px;
+}
+
+.match-form .form-submit {
+    margin-top: 9px;
+}
+
+/* ================= FAQ + FINAL CTA COMPACT ================= */
+
+.faq-section.section-sm {
+    padding-block: clamp(26px, 3.4vw, 46px);
+}
+
+.faq-layout {
+    gap: clamp(18px, 3vw, 42px);
+}
+
+.faq-intro h2 {
+    font-size: clamp(34px, 4.6vw, 60px);
+}
+
+.final-cta.section-sm {
+    padding-block: clamp(24px, 3vw, 42px);
+}
+
+.final-cta-card {
+    min-height: 190px;
+    padding: clamp(22px, 4vw, 40px);
+}
+
+.final-cta-card h2 {
+    font-size: clamp(36px, 5.2vw, 62px);
+}
+
+/* ================= RESPONSIVE COMPACT ================= */
+
+@media (max-width: 1120px) {
+    .home-page .section {
+        padding-block: 32px;
+    }
+
+    .home-page .section-sm {
+        padding-block: 24px;
+    }
+
+    .home-services-grid {
+        grid-auto-rows: auto;
+    }
+
+    .signal-map-card,
+    .signal-photo-card {
+        min-height: 300px;
+    }
+
+    .match-copy,
+    .match-form {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .home-page .section,
+    .home-page .section-sm {
+        padding-block: 26px;
+    }
+
+    .home-hero-copy {
+        padding-top: 30px;
+        padding-bottom: 28px;
+    }
+
+    .home-hero-photo {
+        min-height: 340px;
+    }
+
+    .wildlife-strip.section-sm {
+        padding-block: 0;
+    }
+
+    .wildlife-signs-block,
+    .wildlife-entry-block {
+        padding: 14px;
+    }
+
+    .process-timeline article {
+        min-height: auto;
+    }
+
+    .signal-copy {
+        min-height: auto;
+    }
+
+    .signal-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+
+    .home-page .section,
+    .home-page .section-sm {
+        padding-block: 22px;
+    }
+
+    .home-hero-photo {
+        min-height: 300px;
+    }
+
+    .hero-trust-mini {
+        margin-top: 22px;
+    }
+
+    .wildlife-strip.section-sm {
+        padding-block: 0;
+    }
+
+    .wildlife-type-icon {
+        width: 62px;
+        height: 62px;
+    }
+
+    .home-services.section {
+        padding-block: 22px;
+    }
+
+    .home-services-slider {
+        padding-bottom: 30px;
+    }
+
+    .process-section.section {
+        padding-block: 28px;
+    }
+
+    .signal-board,
+    .match-shell {
+        border-radius: 22px;
+    }
+
+    .signal-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .signal-map-card,
+    .signal-photo-card {
+        min-height: 270px;
+    }
+
+    .home-match-section.section {
+        padding-block: 24px;
+    }
+
+    .final-cta-card {
+        min-height: auto;
+        padding: 22px 18px;
+    }
+}
+
+/* ==================================================
+   WILDLIFE STRIP FULL-BLEED BACKGROUND FIX
+   ================================================== */
+
+.wildlife-strip {
+    border-top: 0;
+    border-bottom: 0;
+    background: var(--color-bg);
+}
+
+.wildlife-strip-shell {
+    background: transparent;
+    overflow: visible;
+}
+
+/* TOP full width background */
+.wildlife-strip-top {
+    position: relative;
+    z-index: 1;
+    background: var(--color-bg-soft);
+    box-shadow: 0 0 0 100vmax var(--color-bg-soft);
+    clip-path: inset(0 -100vmax);
+}
+
+/* BOTTOM full width background */
+.wildlife-strip-bottom {
+    position: relative;
+    z-index: 1;
+    background: var(--color-card);
+    box-shadow: 0 0 0 100vmax var(--color-card);
+    clip-path: inset(0 -100vmax);
+}
+
+/* если хочешь оставить тонкую линию между top и bottom */
+.wildlife-strip-bottom {
+    border-top: 1px solid rgba(216, 222, 208, 0.7);
+}
+
+/* чтобы не было горизонтального скролла */
+html,
+body {
+    overflow-x: hidden;
 }
