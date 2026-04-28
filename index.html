@@ -679,75 +679,84 @@
                 </div>
             </div>
 
-            <form class="form-card match-form" action="#" method="post" data-contact-form data-aos="fade-left">
-                <div class="form-card-head">
-                    <span>Start here</span>
+        <form class="wild-match-form" action="#" method="post" data-contact-form data-aos="fade-left">
+            <div class="wild-form-top">
+                <div>
+                    <span class="wild-form-kicker">Start here</span>
                     <h3>Compare Local Providers</h3>
                     <p>Share a few details so your request can be routed more clearly.</p>
                 </div>
-
-                <div class="form-grid">
-                    <label class="form-field">
-                        <span>Full Name</span>
-                        <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
-                    </label>
-
-                    <label class="form-field">
-                        <span>Phone Number</span>
-                        <input type="tel" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required />
-                    </label>
-
-                    <label class="form-field">
-                        <span>Email Address</span>
-                        <input type="email" name="email" placeholder="you@example.com" autocomplete="email" />
-                    </label>
-
-                    <label class="form-field">
-                        <span>ZIP Code</span>
-                        <input type="text" name="zip" placeholder="ZIP code" autocomplete="postal-code" required />
-                    </label>
+        
+                <div class="wild-form-badge">
+                    <i data-lucide="shield-check"></i>
+                    <span>Free match request</span>
                 </div>
-
-                <div class="form-grid form-grid-compact">
-                    <label class="form-field">
-                        <span>Wildlife Concern</span>
-                        <select name="service" required>
-                            <option value="">Select a concern</option>
-                            <option value="wildlife-activity">Wildlife activity</option>
-                            <option value="raccoons">Raccoons</option>
-                            <option value="squirrels">Squirrels</option>
-                            <option value="bats">Bats</option>
-                            <option value="birds">Birds</option>
-                            <option value="entry-points">Entry point sealing</option>
-                            <option value="not-sure">Not sure yet</option>
-                        </select>
-                    </label>
-
-                    <label class="form-field">
-                        <span>Brief Description</span>
-                        <textarea name="message" rows="3"
-                            placeholder="Noises in attic, animal near roofline..."></textarea>
-                    </label>
-                </div>
-
-                <label class="custom-check">
-                    <input type="checkbox" name="consent" required />
-                    <span class="custom-check-box" aria-hidden="true"></span>
-                    <span>
-                        I understand WILD GUARD is a matching platform and independent providers may contact me about my
-                        request.
-                    </span>
+            </div>
+        
+            <div class="wild-form-fields">
+                <label class="wild-field">
+                    <span>Full Name</span>
+                    <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
                 </label>
-
-                <button class="btn btn-primary form-submit" type="submit">
-                    Request Provider Matches
-                    <i data-lucide="arrow-up-right"></i>
-                </button>
-
-                <p class="form-disclaimer">
-                    No direct wildlife services are performed by WILD GUARD.
-                </p>
-            </form>
+        
+                <label class="wild-field">
+                    <span>Phone Number</span>
+                    <input type="tel" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required />
+                </label>
+        
+                <label class="wild-field">
+                    <span>Email Address</span>
+                    <input type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+                </label>
+        
+                <label class="wild-field">
+                    <span>ZIP Code</span>
+                    <input type="text" name="zip" placeholder="ZIP code" autocomplete="postal-code" required />
+                </label>
+        
+                <label class="wild-field">
+                    <span>Wildlife Concern</span>
+                    <select name="service" required>
+                        <option value="">Select a concern</option>
+                        <option value="wildlife-activity">Wildlife activity</option>
+                        <option value="raccoons">Raccoons</option>
+                        <option value="squirrels">Squirrels</option>
+                        <option value="bats">Bats</option>
+                        <option value="birds">Birds</option>
+                        <option value="entry-points">Entry point sealing</option>
+                        <option value="not-sure">Not sure yet</option>
+                    </select>
+                </label>
+        
+                <label class="wild-field">
+                    <span>Brief Description</span>
+                    <textarea name="message" rows="3"></textarea>
+                </label>
+            </div>
+        
+            <label class="wild-consent">
+                <input type="checkbox" name="consent" required />
+        
+                <span class="wild-consent-box" aria-hidden="true">
+                    <svg viewBox="0 0 16 16">
+                        <path d="M3.4 8.2L6.4 11L12.6 5"></path>
+                    </svg>
+                </span>
+        
+                <span>
+                    I understand WILD GUARD is a matching platform and independent providers may contact me about my request.
+                </span>
+            </label>
+        
+            <button class="btn btn-primary wild-form-submit" type="submit">
+                Request Provider Matches
+                <i data-lucide="arrow-up-right"></i>
+            </button>
+        
+            <p class="wild-form-disclaimer">
+                No direct wildlife services are performed by WILD GUARD.
+            </p>
+        </form>
         </div>
     </div>
 </section>
