@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+        content="Compare independent local bat removal and bat exclusion providers through WILD GUARD. Request provider matches for bat activity near attics, rooflines, vents, and small gaps." />
+
+    <title>Bat Removal | WILD GUARD</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="service-detail-page bat-removal-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" data-header>
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="WILD GUARD home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 72 72" role="img">
+                        <path
+                            d="M36 7.5L61.5 18v22.4c0 12.6-7.8 20.7-25.5 27.1C18.3 61.1 10.5 53 10.5 40.4V18L36 7.5Z" />
+                        <path d="M27.2 29.9c-2.5-4.8-6.4-7.9-11.7-9.1 1.2 5.6 4.4 9.4 9.6 11.4" />
+                        <path d="M44.8 29.9c2.5-4.8 6.4-7.9 11.7-9.1-1.2 5.6-4.4 9.4-9.6 11.4" />
+                        <path
+                            d="M36 49.5c7.3-4.8 10.9-10.2 10.9-16.3 0-5.7-4.4-9.8-10.9-9.8s-10.9 4.1-10.9 9.8c0 6.1 3.6 11.5 10.9 16.3Z" />
+                        <path d="M36 25.2v21.1" />
+                    </svg>
+                </span>
+
+                <span class="brand-text">
+                    <strong data-company-name>WILD GUARD</strong>
+                    <small data-company-tagline>Wildlife Provider Matching</small>
+                </span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-dropdown-link" aria-current="page">
+                        Services
+                        <i data-lucide="chevron-down"></i>
+                    </a>
+
+                    <div class="nav-dropdown-menu">
+                        <a href="wildlife-removal.html">
+                            <i data-lucide="leaf"></i>
+                            Wildlife Removal
+                        </a>
+                        <a href="raccoon-removal.html">
+                            <i data-lucide="shield-check"></i>
+                            Raccoon Removal
+                        </a>
+                        <a href="squirrel-removal.html">
+                            <i data-lucide="home"></i>
+                            Squirrel Removal
+                        </a>
+                        <a href="bat-removal.html">
+                            <i data-lucide="moon"></i>
+                            Bat Removal
+                        </a>
+                        <a href="bird-control.html">
+                            <i data-lucide="feather"></i>
+                            Bird Control
+                        </a>
+                        <a href="exclusion-prevention.html">
+                            <i data-lucide="lock-keyhole"></i>
+                            Exclusion & Prevention
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-phone" href="tel:+18665550148" data-phone-link>
+                    <i data-lucide="phone"></i>
+                    <span data-phone-text>(866) 555-0148</span>
+                </a>
+
+                <a class="btn btn-primary header-cta" href="contact.html">
+                    Get Help Now
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobileMenu"
+                    aria-expanded="false" data-menu-toggle>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <a class="mobile-phone-cta" href="tel:+18665550148" data-phone-link aria-label="Call WILD GUARD">
+        <i data-lucide="phone"></i>
+        <span data-phone-text>Call Now</span>
+    </a>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" data-mobile-menu>
+        <div class="mobile-menu-panel">
+            <div class="mobile-menu-head">
+                <a class="brand brand-mobile" href="index.html" aria-label="WILD GUARD home">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg viewBox="0 0 72 72" role="img">
+                            <path
+                                d="M36 7.5L61.5 18v22.4c0 12.6-7.8 20.7-25.5 27.1C18.3 61.1 10.5 53 10.5 40.4V18L36 7.5Z" />
+                            <path d="M27.2 29.9c-2.5-4.8-6.4-7.9-11.7-9.1 1.2 5.6 4.4 9.4 9.6 11.4" />
+                            <path d="M44.8 29.9c2.5-4.8 6.4-7.9 11.7-9.1-1.2 5.6-4.4 9.4-9.6 11.4" />
+                            <path
+                                d="M36 49.5c7.3-4.8 10.9-10.2 10.9-16.3 0-5.7-4.4-9.8-10.9-9.8s-10.9 4.1-10.9 9.8c0 6.1 3.6 11.5 10.9 16.3Z" />
+                            <path d="M36 25.2v21.1" />
+                        </svg>
+                    </span>
+
+                    <span class="brand-text">
+                        <strong>WILD GUARD</strong>
+                        <small>Provider Matching</small>
+                    </span>
+                </a>
+
+                <button class="mobile-menu-close" type="button" aria-label="Close menu" data-menu-close>
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="mobile-menu-grid">
+                <nav class="mobile-nav" aria-label="Mobile navigation">
+                    <a href="index.html">
+                        <i data-lucide="home"></i>
+                        Home
+                    </a>
+                    <a href="services.html">
+                        <i data-lucide="layers"></i>
+                        Services Overview
+                    </a>
+                    <a href="about.html">
+                        <i data-lucide="badge-info"></i>
+                        About Platform
+                    </a>
+                    <a href="contact.html">
+                        <i data-lucide="send"></i>
+                        Contact
+                    </a>
+                </nav>
+
+                <div class="mobile-services">
+                    <p>Service categories</p>
+
+                    <div class="mobile-services-list">
+                        <a href="wildlife-removal.html">Wildlife Removal</a>
+                        <a href="raccoon-removal.html">Raccoon Removal</a>
+                        <a href="squirrel-removal.html">Squirrel Removal</a>
+                        <a href="bat-removal.html">Bat Removal</a>
+                        <a href="bird-control.html">Bird Control</a>
+                        <a href="exclusion-prevention.html">Exclusion & Prevention</a>
+                    </div>
+                </div>
+
+                <div class="mobile-contact-card">
+                    <span>Need provider options?</span>
+                    <strong>Compare local wildlife providers near you.</strong>
+
+                    <div class="mobile-contact-actions">
+                        <a href="tel:+18665550148" data-phone-link>
+                            <i data-lucide="phone"></i>
+                            <span data-phone-text>(866) 555-0148</span>
+                        </a>
+                        <a href="mailto:support@wildguardhome.com" data-email-link>
+                            <i data-lucide="mail"></i>
+                            <span data-email-text>support@wildguardhome.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MAIN ================= -->
+    <main id="main">
+        <!-- ================= SERVICE HERO ================= -->
+        <section class="service-hero section">
+            <div class="container service-hero-inner">
+                <div class="service-hero-copy" data-aos="fade-up">
+                    <span class="section-kicker">
+                        <i data-lucide="moon"></i>
+                        Bat removal provider matching
+                    </span>
+
+                    <h1>Compare bat removal and exclusion providers for attic and roofline activity.</h1>
+
+                    <p>
+                        WILD GUARD helps homeowners request matches with independent local providers who may evaluate
+                        bat
+                        activity, discuss humane exclusion, and explain timing, inspection, and prevention
+                        considerations.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="contact.html">
+                            Request Provider Matches
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                        <a class="btn btn-outline" href="#serviceOverview">
+                            What to Compare
+                            <i data-lucide="move-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-hero-note">
+                        <i data-lucide="info"></i>
+                        <span>
+                            WILD GUARD is not a bat removal company. Providers are independent, and homeowners verify
+                            credentials, local rules, pricing, methods, and terms directly.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="service-hero-media" data-aos="fade-left" data-aos-delay="120">
+                    <div class="service-hero-image">
+                        <img src="./assets/images/services/bat-removal-hero.jpg"
+                            alt="Residential roofline at dusk representing bat activity around a home" />
+                    </div>
+
+                    <div class="service-hero-badge badge-one">
+                        <i data-lucide="moon"></i>
+                        <span>Dusk activity · attic gaps</span>
+                    </div>
+
+                    <div class="service-hero-badge badge-two">
+                        <i data-lucide="lock-keyhole"></i>
+                        <span>Ask about humane exclusion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= OVERVIEW ================= -->
+        <section class="service-overview section-sm" id="serviceOverview" aria-labelledby="overviewTitle">
+            <div class="container">
+                <div class="service-overview-layout">
+                    <div class="service-overview-copy" data-aos="fade-right">
+                        <span class="section-eyebrow">Service overview</span>
+                        <h2 id="overviewTitle">Bat concerns often require careful timing and exclusion planning.</h2>
+
+                        <p>
+                            Homeowners may notice bats leaving at dusk, small gaps near rooflines, staining near entry
+                            points, sounds in attic spaces, or repeated activity near vents, fascia, chimneys, and upper
+                            exterior areas.
+                        </p>
+
+                        <p>
+                            WILD GUARD helps route your request toward independent local provider options that may be
+                            familiar with bat inspection, humane exclusion, seasonal timing, and local wildlife
+                            requirements.
+                        </p>
+                    </div>
+
+                    <div class="service-overview-card" data-aos="fade-left">
+                        <span>Common bat signs</span>
+
+                        <div class="overview-note-list">
+                            <article>
+                                <i data-lucide="moon"></i>
+                                <strong>Activity visible around dusk or dawn</strong>
+                            </article>
+
+                            <article>
+                                <i data-lucide="home"></i>
+                                <strong>Small gaps near rooflines, vents, or fascia</strong>
+                            </article>
+
+                            <article>
+                                <i data-lucide="scan-search"></i>
+                                <strong>Staining or marks near possible entry points</strong>
+                            </article>
+
+                            <article>
+                                <i data-lucide="volume-2"></i>
+                                <strong>Light sounds or movement in attic areas</strong>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROVIDER QUESTIONS ================= -->
+        <section class="service-questions section" aria-labelledby="questionsTitle">
+            <div class="container">
+                <div class="section-heading split-heading" data-aos="fade-up">
+                    <div>
+                        <span class="section-eyebrow">Before choosing</span>
+                        <h2 id="questionsTitle">Questions to ask bat removal and exclusion providers.</h2>
+                    </div>
+
+                    <p>
+                        Bat-related projects can involve local rules, seasonal timing, exclusion devices, sealing plans,
+                        and follow-up checks. Compare provider details carefully before scheduling.
+                    </p>
+                </div>
+
+                <div class="service-question-grid">
+                    <article data-aos="fade-up">
+                        <span>01</span>
+                        <i data-lucide="scan-search"></i>
+                        <h3>How will the bat activity be confirmed?</h3>
+                        <p>
+                            Ask whether the provider checks rooflines, vents, fascia, attic access, staining, dusk
+                            activity, and possible entry or exit points.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="80">
+                        <span>02</span>
+                        <i data-lucide="leaf"></i>
+                        <h3>What humane exclusion method is proposed?</h3>
+                        <p>
+                            Discuss exclusion devices, timing, sealing sequence, follow-up visits, and whether local or
+                            seasonal restrictions may affect the work.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="160">
+                        <span>03</span>
+                        <i data-lucide="file-text"></i>
+                        <h3>What is included in the quote?</h3>
+                        <p>
+                            Review inspection fees, exclusion materials, sealing scope, cleanup recommendations,
+                            follow-up checks, exclusions, and payment terms.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="240">
+                        <span>04</span>
+                        <i data-lucide="badge-check"></i>
+                        <h3>What should be verified directly?</h3>
+                        <p>
+                            Confirm required licensing, insurance, local compliance, service area, written terms,
+                            warranty details, and provider experience with bat exclusion.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FACTORS ================= -->
+        <section class="service-factors section-sm" aria-labelledby="factorsTitle">
+            <div class="container">
+                <div class="service-factors-layout">
+                    <div class="service-factors-media" data-aos="fade-right">
+                        <img src="./assets/images/services/bat-removal-factors.jpg"
+                            alt="Upper residential roofline and attic area at dusk where bat activity may appear" />
+
+                        <div class="factors-media-badge">
+                            <i data-lucide="calendar-clock"></i>
+                            <span>Timing can affect the plan</span>
+                        </div>
+                    </div>
+
+                    <div class="service-factors-copy" data-aos="fade-left">
+                        <span class="section-eyebrow">What may affect provider choice</span>
+                        <h2 id="factorsTitle">Bat concerns often depend on timing, location, and exclusion scope.</h2>
+
+                        <p>
+                            Provider fit can depend on where bats are entering, whether attic access is needed, whether
+                            exclusions must follow local timing rules, how many gaps are present, and whether cleanup or
+                            sealing is part of the proposal.
+                        </p>
+
+                        <div class="factor-list">
+                            <article>
+                                <i data-lucide="moon"></i>
+                                <div>
+                                    <h3>Activity pattern</h3>
+                                    <p>Dusk or dawn activity, repeated flight paths, and visible exit points can help
+                                        providers understand the situation.</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <i data-lucide="calendar-clock"></i>
+                                <div>
+                                    <h3>Seasonal timing</h3>
+                                    <p>Bat exclusion may involve timing considerations. Ask providers what local rules
+                                        or
+                                        seasonal restrictions may apply.</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <i data-lucide="lock-keyhole"></i>
+                                <div>
+                                    <h3>Sealing and follow-up</h3>
+                                    <p>Ask whether one-way exclusion, sealing, follow-up checks, and cleanup
+                                        recommendations are included or quoted separately.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA FORM ================= -->
+        <section class="service-match-section section" aria-labelledby="matchTitle">
+            <div class="container">
+                <div class="service-match-layout">
+                    <div class="service-match-copy" data-aos="fade-right">
+                        <span class="section-kicker">
+                            <i data-lucide="send"></i>
+                            Free matching request
+                        </span>
+
+                        <h2 id="matchTitle">Request bat removal provider options.</h2>
+
+                        <p>
+                            Share your ZIP code and where you noticed bat activity. WILD GUARD can help connect your
+                            request with independent local providers for comparison.
+                        </p>
+
+                        <div class="service-match-points">
+                            <article>
+                                <i data-lucide="shield-check"></i>
+                                <span>Verify provider credentials directly</span>
+                            </article>
+
+                            <article>
+                                <i data-lucide="calendar-clock"></i>
+                                <span>Ask about timing and local rules</span>
+                            </article>
+
+                            <article>
+                                <i data-lucide="lock-keyhole"></i>
+                                <span>Discuss exclusion and sealing scope</span>
+                            </article>
+                        </div>
+                    </div>
+
+                    <form class="form-card service-form" action="#" method="post" data-contact-form
+                        data-aos="fade-left">
+                        <div class="form-card-head">
+                            <span>Start here</span>
+                            <h3>Compare Providers</h3>
+                        </div>
+
+                        <div class="form-grid">
+                            <label class="form-field">
+                                <span>Full Name</span>
+                                <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+                            </label>
+
+                            <label class="form-field">
+                                <span>Phone Number</span>
+                                <input type="tel" name="phone" placeholder="(555) 000-0000" autocomplete="tel"
+                                    required />
+                            </label>
+
+                            <label class="form-field">
+                                <span>Email Address</span>
+                                <input type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+                            </label>
+
+                            <label class="form-field">
+                                <span>ZIP Code</span>
+                                <input type="text" name="zip" placeholder="ZIP code" autocomplete="postal-code"
+                                    required />
+                            </label>
+                        </div>
+
+                        <label class="form-field">
+                            <span>Wildlife Concern</span>
+                            <select name="service" required>
+                                <option value="bats">Bats</option>
+                                <option value="attic-activity">Attic activity</option>
+                                <option value="dusk-activity">Dusk activity</option>
+                                <option value="roofline-gaps">Roofline gaps</option>
+                                <option value="entry-points">Entry point sealing</option>
+                                <option value="not-sure">Not sure yet</option>
+                            </select>
+                        </label>
+
+                        <label class="form-field">
+                            <span>Brief Description</span>
+                            <textarea name="message" rows="4"
+                                placeholder="Example: bats leaving roofline at dusk, small gap near attic vent, sounds above ceiling..."></textarea>
+                        </label>
+
+                        <label class="custom-check">
+                            <input type="checkbox" name="consent" required />
+                            <span class="custom-check-box" aria-hidden="true"></span>
+                            <span>
+                                I understand WILD GUARD is a matching platform and independent providers may contact me
+                                about my request.
+                            </span>
+                        </label>
+
+                        <button class="btn btn-primary form-submit" type="submit">
+                            Request Provider Matches
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+
+                        <p class="form-disclaimer">
+                            WILD GUARD does not perform bat removal or guarantee provider work.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= RELATED SERVICES ================= -->
+        <section class="related-services section-sm" aria-labelledby="relatedTitle">
+            <div class="container">
+                <div class="section-heading section-heading-center" data-aos="fade-up">
+                    <span class="section-eyebrow">Related provider categories</span>
+                    <h2 id="relatedTitle">Other wildlife categories to compare.</h2>
+                    <p>
+                        If bat activity is not the only concern, these related categories may help you request a more
+                        accurate provider match.
+                    </p>
+                </div>
+
+                <div class="related-services-grid">
+                    <a href="wildlife-removal.html" data-aos="fade-up">
+                        <img src="./assets/images/services/wildlife-removal.jpg"
+                            alt="Wildlife provider checking a home exterior" />
+                        <span>Wildlife Removal</span>
+                    </a>
+
+                    <a href="raccoon-removal.html" data-aos="fade-up" data-aos-delay="80">
+                        <img src="./assets/images/services/raccoon-removal.jpg" alt="Raccoon near a residential roof" />
+                        <span>Raccoon Removal</span>
+                    </a>
+
+                    <a href="bird-control.html" data-aos="fade-up" data-aos-delay="160">
+                        <img src="./assets/images/services/bird-control.jpg" alt="Birds near a residential gutter" />
+                        <span>Bird Control</span>
+                    </a>
+
+                    <a href="exclusion-prevention.html" data-aos="fade-up" data-aos-delay="240">
+                        <img src="./assets/images/services/exclusion-prevention.jpg"
+                            alt="Provider checking home exterior entry points" />
+                        <span>Exclusion & Prevention</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="faq-section section-sm" aria-labelledby="faqTitle">
+            <div class="container">
+                <div class="faq-layout">
+                    <div class="faq-intro" data-aos="fade-right">
+                        <span class="section-eyebrow">Bat removal questions</span>
+                        <h2 id="faqTitle">Before comparing bat providers.</h2>
+                        <p>
+                            These questions help homeowners compare independent provider options while keeping WILD
+                            GUARD’s role clear as a matching platform.
+                        </p>
+                    </div>
+
+                    <div class="faq-list" data-aos="fade-left">
+                        <details>
+                            <summary>
+                                Does WILD GUARD remove bats directly?
+                                <i data-lucide="plus"></i>
+                            </summary>
+                            <p>
+                                No. WILD GUARD is a matching platform. We help homeowners connect with independent local
+                                providers but do not inspect homes, remove bats, perform exclusion, or guarantee
+                                provider
+                                work.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>
+                                What should I ask a bat removal provider?
+                                <i data-lucide="plus"></i>
+                            </summary>
+                            <p>
+                                Ask about inspection steps, humane exclusion methods, timing, local wildlife rules,
+                                licensing where required, insurance, pricing, sealing, cleanup recommendations, and
+                                follow-up.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>
+                                Are bat removal estimates usually free?
+                                <i data-lucide="plus"></i>
+                            </summary>
+                            <p>
+                                Some providers may offer free estimates, while others may charge for inspections, attic
+                                evaluations, or travel. Confirm all fees directly before scheduling.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>
+                                What affects bat exclusion pricing?
+                                <i data-lucide="plus"></i>
+                            </summary>
+                            <p>
+                                Pricing may depend on the number of entry points, roofline access, attic conditions,
+                                exclusion materials, sealing scope, follow-up visits, cleanup needs, and provider
+                                availability.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>
+                                Why should I ask about timing for bat work?
+                                <i data-lucide="plus"></i>
+                            </summary>
+                            <p>
+                                Bat work may be affected by local rules and seasonal restrictions. Homeowners should ask
+                                each provider what timing considerations apply in their area before scheduling.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand-block">
+                    <a class="brand footer-brand" href="index.html" aria-label="WILD GUARD home">
+                        <span class="brand-mark" aria-hidden="true">
+                            <svg viewBox="0 0 72 72" role="img">
+                                <path
+                                    d="M36 7.5L61.5 18v22.4c0 12.6-7.8 20.7-25.5 27.1C18.3 61.1 10.5 53 10.5 40.4V18L36 7.5Z" />
+                                <path d="M27.2 29.9c-2.5-4.8-6.4-7.9-11.7-9.1 1.2 5.6 4.4 9.4 9.6 11.4" />
+                                <path d="M44.8 29.9c2.5-4.8 6.4-7.9 11.7-9.1-1.2 5.6-4.4 9.4-9.6 11.4" />
+                                <path
+                                    d="M36 49.5c7.3-4.8 10.9-10.2 10.9-16.3 0-5.7-4.4-9.8-10.9-9.8s-10.9 4.1-10.9 9.8c0 6.1 3.6 11.5 10.9 16.3Z" />
+                                <path d="M36 25.2v21.1" />
+                            </svg>
+                        </span>
+
+                        <span class="brand-text">
+                            <strong data-company-name>WILD GUARD</strong>
+                            <small data-company-tagline>Wildlife Provider Matching</small>
+                        </span>
+                    </a>
+
+                    <p data-footer-intro>
+                        WILD GUARD helps homeowners compare local independent wildlife service providers. We are not a
+                        direct wildlife removal company and do not perform services ourselves.
+                    </p>
+
+                    <div class="footer-company-meta">
+                        <span data-company-address>USA Service Network</span>
+                        <span data-company-id>WG-AGG-2048</span>
+                    </div>
+                </div>
+
+                <nav class="footer-column" aria-label="Footer platform navigation">
+                    <h3>Platform</h3>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About WILD GUARD</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <nav class="footer-column" aria-label="Footer services navigation">
+                    <h3>Services</h3>
+                    <a href="wildlife-removal.html">Wildlife Removal</a>
+                    <a href="raccoon-removal.html">Raccoon Removal</a>
+                    <a href="squirrel-removal.html">Squirrel Removal</a>
+                    <a href="bat-removal.html">Bat Removal</a>
+                    <a href="bird-control.html">Bird Control</a>
+                    <a href="exclusion-prevention.html">Exclusion & Prevention</a>
+                </nav>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contact</h3>
+
+                    <a href="tel:+18665550148" data-phone-link>
+                        <i data-lucide="phone"></i>
+                        <span data-phone-text>(866) 555-0148</span>
+                    </a>
+
+                    <a href="mailto:support@wildguardhome.com" data-email-link>
+                        <i data-lucide="mail"></i>
+                        <span data-email-text>support@wildguardhome.com</span>
+                    </a>
+
+                    <span>
+                        <i data-lucide="map-pin"></i>
+                        USA service area
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer" data-footer-disclaimer>
+                Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
+                All contractors/providers are independent and this site does not warrant or guarantee any work
+                performed.
+                It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary
+                license and insurance required for the work being performed. All persons depicted in a photo or video
+                are
+                actors or models and not contractors listed on this site.
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span data-current-year>2026</span>
+                    <span data-company-name>WILD GUARD</span>.
+                    Independent wildlife provider matching platform.
+                </p>
+
+                <nav aria-label="Legal navigation">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= COOKIE CONSENT ================= -->
+    <div class="cookie-banner" data-cookie-banner role="region" aria-label="Privacy and cookie notice">
+        <div class="cookie-banner-inner">
+            <div class="cookie-icon" aria-hidden="true">
+                <i data-lucide="shield-check"></i>
+            </div>
+
+            <div class="cookie-content">
+                <h2>Privacy & Cookie Notice</h2>
+                <p>
+                    WILD GUARD uses cookies and similar technologies to improve the website experience and support
+                    provider-matching functionality. Please review our policies before continuing.
+                </p>
+
+                <div class="cookie-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+
+            <div class="cookie-actions">
+                <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>
+                    Accept
+                </button>
+
+                <button class="btn btn-outline btn-sm" type="button" data-cookie-decline>
+                    Decline
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Does WILD GUARD remove bats directly?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. WILD GUARD is a matching platform. We help homeowners connect with independent local providers but do not inspect homes, remove bats, perform exclusion, or guarantee provider work."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What should I ask a bat removal provider?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Ask about inspection steps, humane exclusion methods, timing, local wildlife rules, licensing where required, insurance, pricing, sealing, cleanup recommendations, and follow-up."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Are bat removal estimates usually free?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Some providers may offer free estimates, while others may charge for inspections, attic evaluations, or travel. Confirm all fees directly before scheduling."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What affects bat exclusion pricing?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Pricing may depend on the number of entry points, roofline access, attic conditions, exclusion materials, sealing scope, follow-up visits, cleanup needs, and provider availability."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why should I ask about timing for bat work?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Bat work may be affected by local rules and seasonal restrictions. Homeowners should ask each provider what timing considerations apply in their area before scheduling."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- JS -->
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/service-page.js"></script>
+</body>
+
+</html>
