@@ -3221,3 +3221,22 @@ body {
         font-size: 13px;
     }
 }
+
+/* ==================================================
+   WILDLIFE SIGNS ALIGNMENT FIX
+   ================================================== */
+
+.wildlife-signs-block h3 {
+    text-align: center;
+}
+
+.wildlife-signs-grid {
+    transform: translateX(35px);
+}
+
+/* чтобы на мобилке не уезжало вправо */
+@media (max-width: 820px) {
+    .wildlife-signs-grid {
+        transform: none;
+    }
+}
