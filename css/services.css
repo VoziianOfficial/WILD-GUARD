@@ -1755,3 +1755,47 @@
     }
 }
 
+/* ==================================================
+   SERVICES HERO — TEXT FULL WIDTH FINAL
+   ================================================== */
+
+.services-hero.section .container.services-hero-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 560px !important;
+    padding-inline: clamp(24px, 6vw, 96px) !important;
+
+    display: flex !important;
+    align-items: center !important;
+}
+
+.services-hero.section .services-hero-copy {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+}
+
+.services-hero.section .services-hero-copy h1 {
+    width: min(100%, 980px) !important;
+    max-width: 980px !important;
+    font-size: clamp(54px, 7vw, 98px) !important;
+    line-height: 0.88 !important;
+}
+
+.services-hero.section .services-hero-copy p {
+    width: min(100%, 720px) !important;
+    max-width: 720px !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+}
+
+.services-hero.section .services-hero-actions {
+    display: flex !important;
+    gap: 14px !important;
+    margin-top: 28px !important;
+}
+
+.services-hero.section .services-hero-actions a {
+    min-height: 46px !important;
+    padding: 14px 24px !important;
+}
