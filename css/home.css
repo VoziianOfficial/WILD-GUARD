@@ -2890,3 +2890,53 @@ html,
 body {
     overflow-x: hidden;
 }
+
+/* ==================================================
+   HERO / WILDLIFE SPACING FIX
+   ================================================== */
+
+/* Убираем нижний отступ у hero */
+.home-page .home-hero.section {
+    padding-bottom: 0 !important;
+}
+
+/* На всякий случай убираем лишний зазор внутри hero */
+.home-hero-shell {
+    margin-bottom: 0;
+}
+
+/* Добавляем верхний отступ перед wildlife секцией */
+.home-page .wildlife-strip.section-sm {
+    padding-top: clamp(18px, 2.4vw, 34px) !important;
+    padding-bottom: 0 !important;
+}
+
+/* ==================================================
+   HERO / WILDLIFE SPACING COLOR FIX
+   ================================================== */
+
+/* Hero без нижнего зазора */
+.home-page .home-hero.section {
+    padding-bottom: 0 !important;
+}
+
+/* Вся зона wildlife получает цвет верхнего блока */
+.home-page .wildlife-strip.section-sm {
+    padding-top: clamp(18px, 2.4vw, 34px) !important;
+    padding-bottom: 0 !important;
+    background: var(--color-bg-soft) !important;
+}
+
+/* Верхний блок того же цвета */
+.wildlife-strip-top {
+    background: var(--color-bg-soft);
+    box-shadow: 0 0 0 100vmax var(--color-bg-soft);
+    clip-path: inset(0 -100vmax);
+}
+
+/* Нижний блок остаётся белым/карточным */
+.wildlife-strip-bottom {
+    background: var(--color-card);
+    box-shadow: 0 0 0 100vmax var(--color-card);
+    clip-path: inset(0 -100vmax);
+}
