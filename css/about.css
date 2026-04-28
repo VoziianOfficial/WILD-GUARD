@@ -1050,3 +1050,174 @@
         padding: 0 !important;
     }
 }
+
+/* ================= TABLET OPTIMIZATION ================= */
+
+@media (max-width: 980px) {
+
+    /* сужаем всю секцию */
+    .about-help .container {
+        max-width: 720px;
+    }
+
+    .about-help-shell {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+
+    /* текст компактнее */
+    .about-help-left {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .about-help-left h2 {
+        font-size: clamp(28px, 4vw, 40px);
+        line-height: 1.05;
+    }
+
+    .about-help-left p {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    /* 🔥 самое важное — сетка шагов */
+    .about-help-steps {
+        grid-template-columns: repeat(2, 1fr);
+        /* НЕ 1 колонка */
+        gap: 8px;
+    }
+
+    /* карточки компактнее */
+    .about-help-steps article {
+        padding: 10px 12px;
+        border-radius: 12px;
+    }
+
+    .about-help-steps h3 {
+        font-size: 13px;
+    }
+
+    .about-help-steps p {
+        font-size: 11.5px;
+        line-height: 1.4;
+    }
+
+    .about-help-steps span {
+        font-size: 9px;
+    }
+
+    /* линия аккуратнее */
+    .about-help-steps article::before {
+        width: 18px;
+    }
+}
+
+/* ================= ABOUT VALUES — TABLET COMPACT ================= */
+
+@media (max-width: 980px) {
+
+    /* ограничиваем ширину всей секции */
+    .about-values .container {
+        max-width: 720px;
+    }
+
+    .about-values-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        align-items: center;
+    }
+
+    /* картинка */
+    .about-values-media {
+        min-height: 320px;
+        border-radius: 28px 64px 28px 28px;
+    }
+
+    /* текст */
+    .about-values-copy {
+        max-width: 560px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-values-copy h2 {
+        font-size: clamp(30px, 4vw, 42px);
+        line-height: 1.05;
+    }
+
+    .about-values-copy>p {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    /* список — ключевое */
+    .about-values-list {
+        margin-top: 16px;
+        gap: 8px;
+    }
+
+    .about-values-list article {
+        padding: 12px;
+        border-radius: 16px;
+
+        /* делаем компактнее структуру */
+        grid-template-columns: 36px 1fr;
+        gap: 10px;
+    }
+
+    .about-values-list article>span {
+        width: 34px;
+        height: 34px;
+        font-size: 10px;
+    }
+
+    .about-values-list h3 {
+        font-size: 14px;
+    }
+
+    .about-values-list p {
+        font-size: 12px;
+        line-height: 1.45;
+        margin-top: 4px;
+    }
+
+    /* бейдж на картинке */
+    .about-values-badge {
+        font-size: 11px;
+        padding: 10px 12px;
+    }
+}
+
+/* TABLET — убираем фото в about-values */
+
+@media (max-width: 980px) {
+    .about-values-media {
+        display: none !important;
+    }
+
+    .about-values-layout {
+        grid-template-columns: 1fr !important;
+        justify-content: center;
+    }
+
+    .about-values-copy {
+        max-width: 620px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .about-values-copy h2 {
+        margin-inline: auto;
+    }
+
+    .about-values-copy>p {
+        margin-inline: auto;
+    }
+
+    .about-values-list {
+        max-width: 560px;
+        margin-inline: auto;
+    }
+}
