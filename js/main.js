@@ -447,3 +447,148 @@ function initLibraries() {
         });
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const panel = document.querySelector(".quiz-panel");
+    if (!panel) return;
+
+    const steps = panel.querySelectorAll(".quiz-step");
+    const progress = panel.querySelector("[data-quiz-progress]");
+    const stepText = panel.querySelector("[data-quiz-step-text]");
+    const submit = panel.querySelector(".quiz-submit");
+    const errorBox = panel.querySelector("[data-quiz-error]");
+
+    let currentStep = 1;
+    const answers = {};
+
+    const showStep = (step) => {
+        steps.forEach((item) => {
+            item.classList.toggle("is-active", Number(item.dataset.step) === step);
+        });
+
+        if (progress) progress.style.width = `${(step / steps.length) * 100}%`;
+        if (stepText) stepText.textContent = `Step ${step} of ${steps.length}`;
+    };
+
+    const showError = (message) => {
+        if (!errorBox) return;
+        errorBox.textContent = message;
+        errorBox.classList.add("is-visible");
+    };
+
+    const clearError = () => {
+        if (!errorBox) return;
+        errorBox.textContent = "";
+        errorBox.classList.remove("is-visible");
+    };
+
+    const isValidZip = (zip) => /^\d{5}$/.test(zip);
+
+    const isValidPhone = (phone) => {
+        const digits = phone.replace(/\D/g, "");
+        return digits.length >= 10;
+    };
+
+    panel.querySelectorAll(".quiz-options button").forEach((button) => {
+        button.addEventListener("click", () => {
+            clearError();
+
+            const step = Number(button.closest(".quiz-step").dataset.step);
+
+            button.closest(".quiz-options")
+                .querySelectorAll("button")
+                .forEach((btn) => btn.classList.remove("is-selected"));
+
+            button.classList.add("is-selected");
+            answers[`step_${step}`] = button.dataset.value;
+
+            if (step < steps.length) {
+                currentStep = step + 1;
+                showStep(currentStep);
+            }
+        });
+    });
+
+    submit.addEventListener("click", async () => {
+        clearError();
+
+        const zipInput = panel.querySelector("[data-quiz-zip]");
+        const phoneInput = panel.querySelector("[data-quiz-phone]");
+
+        const zip = zipInput.value.trim();
+        const phone = phoneInput.value.trim();
+
+        zipInput.classList.remove("is-invalid");
+        phoneInput.classList.remove("is-invalid");
+
+        if (!answers.step_1) {
+            showError("Please choose what you noticed.");
+            currentStep = 1;
+            showStep(currentStep);
+            return;
+        }
+
+        if (!answers.step_2) {
+            showError("Please choose where the activity appears.");
+            currentStep = 2;
+            showStep(currentStep);
+            return;
+        }
+
+        if (!zip) {
+            zipInput.classList.add("is-invalid");
+            showError("Please enter your ZIP code.");
+            return;
+        }
+
+        if (!isValidZip(zip)) {
+            zipInput.classList.add("is-invalid");
+            showError("ZIP code should be 5 digits.");
+            return;
+        }
+
+        if (!phone) {
+            phoneInput.classList.add("is-invalid");
+            showError("Please enter your phone number.");
+            return;
+        }
+
+        if (!isValidPhone(phone)) {
+            phoneInput.classList.add("is-invalid");
+            showError("Please enter a valid phone number.");
+            return;
+        }
+
+        answers.zip = zip;
+        answers.phone = phone;
+
+        submit.disabled = true;
+        submit.innerHTML = "Sending...";
+
+        try {
+            await new Promise((resolve) => setTimeout(resolve, 1200));
+
+            panel.innerHTML = `
+                <div class="quiz-success">
+                    <i data-lucide="check-circle"></i>
+                    <h3>Request sent</h3>
+                    <p>Your request has been submitted. We will connect you with provider options shortly.</p>
+                </div>
+            `;
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        } catch (err) {
+            submit.disabled = false;
+            submit.innerHTML = "Try again";
+            showError("Something went wrong. Please try again.");
+        }
+    });
+
+    showStep(currentStep);
+});

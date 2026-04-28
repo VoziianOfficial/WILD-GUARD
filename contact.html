@@ -201,56 +201,89 @@
     <!-- ================= MAIN ================= -->
     <main id="main">
         <!-- ================= HERO ================= -->
-        <section class="contact-hero section">
-            <div class="container contact-hero-inner">
-                <div class="contact-hero-copy" data-aos="fade-up">
-                    <span class="section-kicker">
-                        <i data-lucide="send"></i>
-                        Request provider matches
-                    </span>
+<section class="contact-hero section">
+    <div class="contact-hero-bg" aria-hidden="true"></div>
 
-                    <h1>Tell us what you noticed. Compare wildlife provider options.</h1>
+    <div class="container contact-hero-inner">
+        <div class="contact-hero-copy" data-aos="fade-up">
+            <span class="contact-hero-kicker">
+                <i data-lucide="send"></i>
+                Request provider matches
+            </span>
 
-                    <p>
-                        Share your wildlife concern, location, and preferred contact details. WILD GUARD can help
-                        connect your request with independent local provider options for review.
-                    </p>
+            <h1>Start with what you noticed.</h1>
 
-                    <div class="contact-hero-points">
-                        <article>
-                            <i data-lucide="clock"></i>
-                            <span>Fast request start</span>
-                        </article>
+            <p>
+                Describe the wildlife concern around your home. WILD GUARD helps route your request toward independent
+                local provider options.
+            </p>
 
-                        <article>
-                            <i data-lucide="map-pin"></i>
-                            <span>USA provider matching</span>
-                        </article>
+            <div class="contact-hero-actions">
+                <a class="btn btn-primary" href="#contactForm">
+                    Start Request
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
 
-                        <article>
-                            <i data-lucide="shield-check"></i>
-                            <span>Independent providers</span>
-                        </article>
-                    </div>
-                </div>
+                <a class="btn btn-outline" href="services.html">
+                    View Services
+                    <i data-lucide="layers"></i>
+                </a>
+            </div>
+        </div>
 
-                <div class="contact-hero-card" data-aos="fade-left" data-aos-delay="120">
-                    <div class="contact-mini-photo">
-                        <img src="./assets/images/contact/contact-hero.jpg"
-                            alt="Quiet residential exterior near trees for wildlife provider matching" />
-                    </div>
+        <div class="contact-request-panel quiz-panel" data-aos="fade-left" data-aos-delay="120">
+            <div class="quiz-progress">
+                <span data-quiz-step-text>Step 1 of 3</span>
+                <div><i data-quiz-progress></i></div>
+            </div>
 
-                    <div class="contact-mini-content">
-                        <span>Platform note</span>
-                        <strong>WILD GUARD does not perform direct wildlife services.</strong>
-                        <p>
-                            Homeowners verify provider credentials, pricing, service scope, and terms directly before
-                            hiring.
-                        </p>
-                    </div>
+            <div class="quiz-step is-active" data-step="1">
+                <span class="quiz-kicker">What happened?</span>
+                <h3>What did you notice?</h3>
+
+                <div class="quiz-options">
+                    <button type="button" data-value="Noises">Noises in attic/walls</button>
+                    <button type="button" data-value="Animal seen">Animal seen outside</button>
+                    <button type="button" data-value="Droppings">Droppings or tracks</button>
+                    <button type="button" data-value="Entry gap">Possible entry gap</button>
                 </div>
             </div>
-        </section>
+
+            <div class="quiz-step" data-step="2">
+                <span class="quiz-kicker">Where is it?</span>
+                <h3>Where do you see activity?</h3>
+
+                <div class="quiz-options">
+                    <button type="button" data-value="Attic">Attic / ceiling</button>
+                    <button type="button" data-value="Roofline">Roofline / vents</button>
+                    <button type="button" data-value="Garage">Garage / crawlspace</button>
+                    <button type="button" data-value="Yard">Yard / exterior</button>
+                </div>
+            </div>
+
+            <div class="quiz-step" data-step="3">
+                <span class="quiz-kicker">Contact details</span>
+                <h3>Where should providers contact you?</h3>
+
+                <div class="quiz-fields">
+                    <input type="text" placeholder="ZIP code" data-quiz-zip>
+                    <input type="tel" placeholder="Phone number" data-quiz-phone>
+                </div>
+
+                <p class="quiz-error" data-quiz-error></p>
+
+                <button type="button" class="quiz-submit">
+                    Request Matches
+                    <i data-lucide="arrow-up-right"></i>
+                </button>
+            </div>
+
+            <p class="quiz-note">
+                WILD GUARD connects requests with independent providers. We do not perform services directly.
+            </p>
+        </div>
+    </div>
+</section>
 
         <!-- ================= CONTACT BODY ================= -->
         <section class="contact-main section-sm" aria-labelledby="contactFormTitle">
