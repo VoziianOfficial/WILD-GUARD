@@ -339,6 +339,8 @@
 }
 
 .about-story-card {
+    position: relative;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 0.38fr 1fr;
     gap: clamp(22px, 5vw, 58px);
@@ -346,28 +348,42 @@
     border: 1px solid var(--color-border);
     border-radius: 42px;
     background:
-        radial-gradient(circle at 92% 8%, rgba(139, 162, 118, 0.13), transparent 32%),
-        var(--color-card);
+        linear-gradient(90deg,
+            rgba(247, 246, 241, 0.96) 0%,
+            rgba(247, 246, 241, 0.9) 48%,
+            rgba(247, 246, 241, 0.68) 100%),
+        url("../assets/images/about/about-story.jpg") center right / cover no-repeat;
     box-shadow: var(--shadow-soft);
 }
 
 .about-story-label {
-    display: flex;
-    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+    border-radius: 32px 90px 32px 32px;
+    background:
+        linear-gradient(180deg, rgba(38, 51, 33, 0.06), rgba(38, 51, 33, 0.55)),
+        url("../assets/images/about/about-story.jpg") center / cover no-repeat;
+    box-shadow: 0 18px 44px rgba(38, 51, 33, 0.12);
 }
 
 .about-story-label span {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    z-index: 2;
     display: inline-flex;
     padding: 10px 14px;
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(247, 246, 241, 0.34);
     border-radius: 999px;
-    background: var(--color-bg);
+    background: rgba(247, 246, 241, 0.88);
     color: var(--color-dark);
     font-size: 12px;
     font-weight: 900;
     letter-spacing: 0.12em;
     line-height: 1.2;
     text-transform: uppercase;
+    backdrop-filter: blur(14px);
 }
 
 .about-story-content h2 {
