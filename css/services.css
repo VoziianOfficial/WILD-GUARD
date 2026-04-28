@@ -1011,3 +1011,52 @@
         width: 100%;
     }
 }
+
+/* ==================================================
+   SERVICES DIRECTORY — SWIPER TABLET / MOBILE
+   ================================================== */
+
+@media (max-width: 1120px) {
+    .services-directory-grid {
+        display: block !important;
+        overflow: hidden;
+        padding: 8px;
+    }
+
+    .services-directory-grid.swiper {
+        border-radius: 28px;
+    }
+
+    .services-directory-grid .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .services-directory-grid .directory-card {
+        height: 310px !important;
+        min-height: 310px !important;
+        border-radius: 24px !important;
+    }
+
+    .services-directory-grid .directory-featured,
+    .services-directory-grid .directory-wide {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .services-directory-grid .directory-card {
+        height: 290px !important;
+        min-height: 290px !important;
+    }
+
+    .directory-card-content h3,
+    .directory-featured .directory-card-content h3 {
+        font-size: 30px !important;
+    }
+
+    .directory-card-content p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}

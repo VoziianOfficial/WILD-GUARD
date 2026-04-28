@@ -142,3 +142,77 @@ function initProviderFitMotion() {
         );
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    let servicesDirectorySwiper = null;
+
+    const initServicesDirectorySwiper = () => {
+        const slider = document.querySelector(".services-directory-grid");
+
+        if (!slider || typeof Swiper === "undefined") return;
+
+        const cards = slider.querySelectorAll(".directory-card");
+
+        if (window.innerWidth <= 1120) {
+            if (servicesDirectorySwiper) return;
+
+            slider.classList.add("swiper");
+
+            let wrapper = slider.querySelector(".swiper-wrapper");
+
+            if (!wrapper) {
+                wrapper = document.createElement("div");
+                wrapper.className = "swiper-wrapper";
+
+                cards.forEach((card) => {
+                    card.classList.add("swiper-slide");
+                    wrapper.appendChild(card);
+                });
+
+                slider.appendChild(wrapper);
+            }
+
+            servicesDirectorySwiper = new Swiper(slider, {
+                loop: true,
+                speed: 700,
+                spaceBetween: 12,
+                grabCursor: true,
+                autoplay: {
+                    delay: 2600,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                slidesPerView: 1,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 12,
+                    },
+                },
+            });
+        } else {
+            if (!servicesDirectorySwiper) return;
+
+            servicesDirectorySwiper.destroy(true, true);
+            servicesDirectorySwiper = null;
+
+            slider.classList.remove("swiper");
+
+            const wrapper = slider.querySelector(".swiper-wrapper");
+            const slides = slider.querySelectorAll(".directory-card");
+
+            if (wrapper) {
+                slides.forEach((slide) => {
+                    slide.classList.remove("swiper-slide");
+                    slider.appendChild(slide);
+                });
+
+                wrapper.remove();
+            }
+        }
+    };
+
+    initServicesDirectorySwiper();
+
+    window.addEventListener("resize", initServicesDirectorySwiper);
+});
