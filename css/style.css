@@ -1832,3 +1832,53 @@ p {
         gap: 8px;
     }
 }
+
+/* ==================================================
+   SERVICES PAGE — REDUCE SECTION GAPS
+   ================================================== */
+
+.services-page main>section {
+    margin: 0 !important;
+}
+
+.services-page .section {
+    padding-block: clamp(26px, 3.6vw, 48px) !important;
+}
+
+.services-page .section-sm {
+    padding-block: clamp(18px, 2.6vw, 34px) !important;
+}
+
+/* hero не трогаем */
+.services-page .services-hero.section {
+    padding: 0 !important;
+}
+
+/* directory уже компактная, оставляем мягкий отступ */
+.services-page .services-directory.section-sm {
+    padding-block: clamp(18px, 2.4vw, 30px) !important;
+}
+
+/* CTA тоже компактнее */
+.services-page .services-cta.section-sm {
+    padding-block: clamp(18px, 2.4vw, 30px) !important;
+}
+
+/* FAQ компактнее */
+.services-page .faq-section.section-sm {
+    padding-block: clamp(18px, 2.4vw, 30px) !important;
+}
+
+@media (max-width: 560px) {
+    .services-page .section {
+        padding-block: 24px !important;
+    }
+
+    .services-page .section-sm {
+        padding-block: 18px !important;
+    }
+
+    .services-page .services-hero.section {
+        padding: 0 !important;
+    }
+}
