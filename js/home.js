@@ -182,3 +182,70 @@ function initEntryPointMotion() {
         });
     });
 }
+
+/* ==================================================
+   HOME SERVICES SWIPER ON TABLET / MOBILE
+   ================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+    initHomeServicesSwiper();
+});
+
+let homeServicesSwiper = null;
+
+function initHomeServicesSwiper() {
+    const slider = document.querySelector("[data-home-services-slider]");
+
+    if (!slider || typeof Swiper === "undefined") return;
+
+    const breakpoint = window.matchMedia("(max-width: 1120px)");
+
+    const enableSwiper = () => {
+        if (homeServicesSwiper) return;
+
+        homeServicesSwiper = new Swiper(slider, {
+            slidesPerView: 1.08,
+            spaceBetween: 14,
+            speed: 650,
+            grabCursor: true,
+            watchOverflow: true,
+            pagination: {
+                el: ".home-services-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".home-services-next",
+                prevEl: ".home-services-prev",
+            },
+            breakpoints: {
+                560: {
+                    slidesPerView: 1.35,
+                    spaceBetween: 16,
+                },
+                820: {
+                    slidesPerView: 2.15,
+                    spaceBetween: 16,
+                },
+            },
+        });
+    };
+
+    const disableSwiper = () => {
+        if (!homeServicesSwiper) return;
+
+        homeServicesSwiper.destroy(true, true);
+        homeServicesSwiper = null;
+    };
+
+    const checkMode = () => {
+        if (breakpoint.matches) {
+            enableSwiper();
+        } else {
+            disableSwiper();
+        }
+    };
+
+    checkMode();
+
+    breakpoint.addEventListener("change", checkMode);
+}
