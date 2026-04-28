@@ -865,3 +865,280 @@
         min-height: 230px;
     }
 }
+
+/* ==================================================
+   SERVICE PAGE INDIVIDUALITY UPGRADE
+   Makes each service page feel visually different
+   ================================================== */
+
+
+/* ================= RACCOON PAGE ================= */
+/* Более плотная, ночная, roofline/chimney атмосфера */
+
+.raccoon-removal-page .service-hero {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(139, 162, 118, 0.2), transparent 30%),
+        linear-gradient(135deg, #F7F6F1 0%, #E7EDDF 48%, #DADFD2 100%);
+}
+
+.raccoon-removal-page .service-hero-image {
+    border-radius: 120px 46px 46px 46px;
+}
+
+.raccoon-removal-page .service-overview-card {
+    background:
+        linear-gradient(145deg, rgba(63, 79, 55, 0.94), rgba(38, 51, 33, 0.96));
+    color: var(--color-text-light);
+}
+
+.raccoon-removal-page .service-overview-card>span,
+.raccoon-removal-page .overview-note-list strong {
+    color: var(--color-text-light);
+}
+
+.raccoon-removal-page .overview-note-list article {
+    border-color: rgba(247, 246, 241, 0.14);
+    background: rgba(247, 246, 241, 0.08);
+}
+
+.raccoon-removal-page .overview-note-list svg {
+    background: var(--color-bg-soft);
+    color: var(--color-dark-deep);
+}
+
+.raccoon-removal-page .service-question-grid article:nth-child(odd) {
+    transform: translateY(18px);
+}
+
+
+/* ================= SQUIRREL PAGE ================= */
+/* Более лёгкая, активная, roofline/attic movement */
+
+.squirrel-removal-page .service-hero {
+    background:
+        radial-gradient(circle at 18% 20%, rgba(221, 232, 212, 0.95), transparent 34%),
+        radial-gradient(circle at 88% 18%, rgba(139, 162, 118, 0.14), transparent 30%),
+        var(--color-bg);
+}
+
+.squirrel-removal-page .service-hero-image {
+    border-radius: 46px 46px 120px 46px;
+}
+
+.squirrel-removal-page .service-overview-layout {
+    align-items: stretch;
+}
+
+.squirrel-removal-page .service-overview-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 44px 44px 90px 44px;
+}
+
+.squirrel-removal-page .overview-note-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.squirrel-removal-page .overview-note-list article {
+    grid-template-columns: 1fr;
+    align-content: start;
+    min-height: 150px;
+}
+
+.squirrel-removal-page .service-question-grid article {
+    border-radius: 999px 32px 32px 999px;
+}
+
+.squirrel-removal-page .service-question-grid article:nth-child(even) {
+    border-radius: 32px 999px 999px 32px;
+}
+
+
+/* ================= BAT PAGE ================= */
+/* Dusk / evening mood, более атмосферная */
+
+.bat-removal-page .service-hero {
+    background:
+        radial-gradient(circle at 18% 16%, rgba(139, 162, 118, 0.18), transparent 30%),
+        linear-gradient(135deg, #F7F6F1 0%, #EEF2E8 38%, #DDE3D5 100%);
+}
+
+.bat-removal-page .service-hero-image {
+    border-radius: 46px 46px 46px 120px;
+}
+
+.bat-removal-page .service-factors {
+    background:
+        radial-gradient(circle at 82% 18%, rgba(139, 162, 118, 0.22), transparent 32%),
+        linear-gradient(135deg, var(--color-dark), var(--color-dark-deep));
+    color: var(--color-text-light);
+}
+
+.bat-removal-page .service-factors-copy h2,
+.bat-removal-page .service-factors-copy .section-eyebrow {
+    color: var(--color-text-light);
+}
+
+.bat-removal-page .service-factors-copy>p {
+    color: rgba(247, 246, 241, 0.72);
+}
+
+.bat-removal-page .factor-list article {
+    border-color: rgba(247, 246, 241, 0.14);
+    background: rgba(247, 246, 241, 0.08);
+}
+
+.bat-removal-page .factor-list h3 {
+    color: var(--color-text-light);
+}
+
+.bat-removal-page .factor-list p {
+    color: rgba(247, 246, 241, 0.68);
+}
+
+.bat-removal-page .factor-list svg {
+    background: var(--color-bg-soft);
+    color: var(--color-dark-deep);
+}
+
+
+/* ================= BIRD PAGE ================= */
+/* Более воздушная, светлая, exterior/roofline vibe */
+
+.bird-control-page .service-hero {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(221, 232, 212, 0.95), transparent 34%),
+        linear-gradient(180deg, #F7F6F1 0%, #F1F3EA 100%);
+}
+
+.bird-control-page .service-hero-image {
+    border-radius: 120px 120px 46px 46px;
+}
+
+.bird-control-page .service-overview {
+    background:
+        linear-gradient(180deg, var(--color-bg), var(--color-bg-muted));
+}
+
+.bird-control-page .service-overview-layout {
+    grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1fr);
+}
+
+.bird-control-page .service-overview-copy {
+    order: 2;
+}
+
+.bird-control-page .service-overview-card {
+    order: 1;
+}
+
+.bird-control-page .service-question-grid article {
+    min-height: 250px;
+    border-radius: 34px;
+}
+
+.bird-control-page .service-question-grid article:nth-child(2),
+.bird-control-page .service-question-grid article:nth-child(4) {
+    margin-top: 34px;
+}
+
+
+/* ================= EXCLUSION PAGE ================= */
+/* Более техническая, blueprint/prevention ощущение */
+
+.exclusion-prevention-page .service-hero {
+    background:
+        linear-gradient(rgba(247, 246, 241, 0.92), rgba(247, 246, 241, 0.92)),
+        linear-gradient(90deg, rgba(63, 79, 55, 0.14) 1px, transparent 1px),
+        linear-gradient(rgba(63, 79, 55, 0.14) 1px, transparent 1px),
+        var(--color-bg);
+    background-size: auto, 42px 42px, 42px 42px, auto;
+}
+
+.exclusion-prevention-page .service-hero-image {
+    border-radius: 46px;
+}
+
+.exclusion-prevention-page .service-overview-card {
+    border-radius: 28px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(231, 237, 223, 0.92));
+}
+
+.exclusion-prevention-page .service-question-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.exclusion-prevention-page .service-question-grid article {
+    min-height: 230px;
+    border-radius: 28px;
+}
+
+.exclusion-prevention-page .service-question-grid article:nth-child(1),
+.exclusion-prevention-page .service-question-grid article:nth-child(4) {
+    background:
+        radial-gradient(circle at 92% 12%, rgba(221, 232, 212, 0.9), transparent 32%),
+        var(--color-card);
+}
+
+.exclusion-prevention-page .service-factors-media {
+    border-radius: 46px;
+}
+
+
+/* ================= RELATED SERVICES VARIATION ================= */
+
+.raccoon-removal-page .related-services-grid a:nth-child(odd),
+.bat-removal-page .related-services-grid a:nth-child(odd) {
+    transform: translateY(18px);
+}
+
+.squirrel-removal-page .related-services-grid a,
+.bird-control-page .related-services-grid a {
+    min-height: 260px;
+}
+
+.exclusion-prevention-page .related-services-grid a {
+    border-radius: 26px;
+}
+
+
+/* ================= RESPONSIVE FIXES FOR VARIATIONS ================= */
+
+@media (max-width: 1120px) {
+    .bird-control-page .service-overview-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .bird-control-page .service-overview-copy,
+    .bird-control-page .service-overview-card {
+        order: initial;
+    }
+
+    .exclusion-prevention-page .service-question-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 820px) {
+
+    .squirrel-removal-page .overview-note-list,
+    .exclusion-prevention-page .service-question-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-page .service-question-grid article,
+    .service-detail-page .service-question-grid article:nth-child(n),
+    .squirrel-removal-page .service-question-grid article,
+    .squirrel-removal-page .service-question-grid article:nth-child(even) {
+        margin-top: 0;
+        border-radius: 26px;
+        transform: none;
+    }
+
+    .raccoon-removal-page .related-services-grid a:nth-child(odd),
+    .bat-removal-page .related-services-grid a:nth-child(odd) {
+        transform: none;
+    }
+}
