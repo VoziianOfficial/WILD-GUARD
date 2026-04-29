@@ -856,6 +856,16 @@
    RESPONSIVE ABOUT
    ================================================== */
 
+@media (max-width: 1240px) {
+    .about-values-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-values-media {
+        min-height: 460px;
+    }
+}
+
 @media (max-width: 1120px) {
 
     .about-hero-inner,
