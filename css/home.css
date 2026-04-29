@@ -198,6 +198,10 @@
     margin-top: 12px;
 }
 
+.wildlife-type-card-dup {
+    display: none;
+}
+
 .wildlife-type-card {
     position: relative;
     display: grid;
@@ -317,6 +321,16 @@
 .wildlife-type-card:hover span {
     color: var(--color-dark);
     transform: translateY(-2px);
+}
+
+@keyframes wildlifeStripMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 7px));
+    }
 }
 
 .wildlife-strip-bottom {
@@ -2136,9 +2150,26 @@
         font-size: clamp(24px, 6vw, 32px);
     }
 
+    .wildlife-strip-top {
+        overflow: hidden;
+    }
+
     .wildlife-types-row {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14px 10px;
+        display: flex;
+        gap: 14px;
+        width: max-content;
+        margin-top: 16px;
+        animation: wildlifeStripMarquee 22s linear infinite;
+        will-change: transform;
+    }
+
+    .wildlife-type-card {
+        flex: 0 0 132px;
+        animation: none;
+    }
+
+    .wildlife-type-card-dup {
+        display: grid;
     }
 
     .wildlife-type-icon {
@@ -2311,7 +2342,14 @@
     }
 
     .wildlife-types-row {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 14px;
+        animation-duration: 18s;
+    }
+
+    .wildlife-type-card {
+        flex-basis: 114px;
+        gap: 7px;
     }
 
     .wildlife-type-icon {
