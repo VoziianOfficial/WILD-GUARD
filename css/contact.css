@@ -977,6 +977,41 @@
     }
 }
 
+/* GUIDE: TABLET KEEP DESKTOP LAYOUT, MORE COMPACT */
+@media (min-width: 768px) and (max-width: 980px) {
+    .contact-guide-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        gap: 22px !important;
+        align-items: start !important;
+        padding: 28px !important;
+        text-align: left !important;
+    }
+
+    .contact-guide-copy h2 {
+        font-size: clamp(34px, 4.2vw, 46px);
+    }
+
+    .contact-guide-copy > p,
+    .contact-guide-note {
+        margin-inline: 0 !important;
+    }
+
+    .contact-guide-list {
+        max-width: none !important;
+        margin-inline: 0 !important;
+        gap: 9px;
+    }
+
+    .contact-guide-list article {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .contact-guide-list article:hover {
+        transform: none;
+    }
+}
+
 @media (max-width: 560px) {
     .contact-hero-inner {
         padding-block: 44px 24px;
@@ -1015,10 +1050,6 @@
     .contact-guide-card {
         padding: 20px;
         border-radius: 28px;
-    }
-
-    .contact-guide-copy h2 {
-        font-size: clamp(34px, 11vw, 48px);
     }
 
     .contact-guide-note,
