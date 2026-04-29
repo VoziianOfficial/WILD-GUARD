@@ -342,17 +342,21 @@ p {
 }
 
 /* ==================================================
-   HEADER
+   HEADER — STICKY GLOBAL FIX
    ================================================== */
 
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 900;
-    height: var(--header-height);
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    height: var(--header-height) !important;
     border-bottom: 1px solid rgba(216, 222, 208, 0.82);
-    background: rgba(247, 246, 241, 0.82);
+    background: rgba(247, 246, 241, 0.9);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     transition:
         height var(--transition),
         background var(--transition),
@@ -360,9 +364,25 @@ p {
 }
 
 .site-header.is-scrolled {
-    height: 72px;
-    background: rgba(247, 246, 241, 0.94);
+    height: 72px !important;
+    background: rgba(247, 246, 241, 0.97);
     box-shadow: 0 16px 42px rgba(38, 51, 33, 0.08);
+}
+
+/* чтобы контент НЕ залезал под fixed header */
+body {
+    padding-top: var(--header-height);
+}
+
+/* если на home hero должен начинаться прямо под хедером */
+.home-hero.section,
+.services-hero.section,
+.contact-hero.section,
+.about-hero.section,
+.service-hero.section,
+.legal-hero.section {
+    margin-top: calc(var(--header-height) * -1);
+    padding-top: var(--header-height) !important;
 }
 
 .header-inner {
@@ -371,6 +391,28 @@ p {
     justify-content: space-between;
     height: 100%;
     gap: 24px;
+}
+
+/* tablet */
+@media (max-width: 1120px) {
+    :root {
+        --header-height: 76px;
+    }
+
+    .site-header.is-scrolled {
+        height: 72px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 560px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    .site-header.is-scrolled {
+        height: 68px !important;
+    }
 }
 
 .brand {
@@ -1417,10 +1459,6 @@ p {
    ================================================== */
 
 @media (max-width: 1120px) {
-    :root {
-        --header-height: 76px;
-    }
-
     .desktop-nav {
         display: none;
     }
@@ -1444,6 +1482,13 @@ p {
     .split-heading {
         grid-template-columns: 1fr;
         gap: 14px;
+    }
+
+    .final-cta-actions .btn {
+        min-width: 140px;
+        max-width: 180px;
+        padding: 9px 16px;
+        font-size: 12px;
     }
 }
 
@@ -1541,14 +1586,6 @@ p {
 }
 
 @media (max-width: 560px) {
-    :root {
-        --header-height: 70px;
-    }
-
-    .site-header.is-scrolled {
-        height: 68px;
-    }
-
     .header-inner {
         gap: 10px;
     }
@@ -1609,6 +1646,27 @@ p {
 
     .footer-disclaimer {
         font-size: 11px;
+    }
+
+    .services-page .section {
+        padding-block: 24px !important;
+    }
+
+    .services-page .section-sm {
+        padding-block: 18px !important;
+    }
+
+    .services-page .services-hero.section {
+        padding: 0 !important;
+    }
+
+    .final-cta-actions {
+        align-items: stretch;
+    }
+
+    .final-cta-actions .btn {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -1869,20 +1927,6 @@ p {
     padding-block: clamp(18px, 2.4vw, 30px) !important;
 }
 
-@media (max-width: 560px) {
-    .services-page .section {
-        padding-block: 24px !important;
-    }
-
-    .services-page .section-sm {
-        padding-block: 18px !important;
-    }
-
-    .services-page .services-hero.section {
-        padding: 0 !important;
-    }
-}
-
 /* ================= FINAL CTA BUTTONS — FIX ================= */
 
 .final-cta-actions {
@@ -1900,28 +1944,6 @@ p {
     padding: 10px 18px;
 }
 
-/* планшет — чуть меньше */
-@media (max-width: 1120px) {
-    .final-cta-actions .btn {
-        min-width: 140px;
-        max-width: 180px;
-        padding: 9px 16px;
-        font-size: 12px;
-    }
-}
-
-/* мобилка — обратно на всю ширину (это важно) */
-@media (max-width: 560px) {
-    .final-cta-actions {
-        align-items: stretch;
-    }
-
-    .final-cta-actions .btn {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
 /* ================= FINAL CTA — TABLET BUTTON ROW ================= */
 
 @media (min-width: 768px) and (max-width: 1120px) {
@@ -1937,7 +1959,5 @@ p {
 
     .final-cta-actions .btn {
         width: auto !important;
-        min-width: 140px;
-        max-width: 180px;
     }
 }
