@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFaqIcons();
     initGlowCards();
     initSmoothAnchorScroll();
+    initServiceSignsMarquee();
 
     /* важно: готовим анимации ДО запуска AOS */
     prepareAnimationElements();
@@ -371,6 +372,46 @@ function initSmoothAnchorScroll() {
             });
         });
     });
+}
+
+/* ==================================================
+   SERVICE SIGNS MARQUEE (tablet/mobile)
+   ================================================== */
+
+function initServiceSignsMarquee() {
+    const strips = document.querySelectorAll(".service-signs-strip");
+
+    if (!strips.length) return;
+
+    const setupMarquee = () => {
+        const isCompact = window.innerWidth <= 1120;
+
+        strips.forEach((strip) => {
+            const list = strip.querySelector(".service-signs-list");
+            if (!list) return;
+
+            if (isCompact) {
+                strip.classList.add("is-marquee");
+
+                const hasClones = list.querySelector("[data-marquee-clone]");
+                if (!hasClones) {
+                    const originals = Array.from(list.children);
+                    originals.forEach((item) => {
+                        const clone = item.cloneNode(true);
+                        clone.setAttribute("data-marquee-clone", "true");
+                        clone.setAttribute("aria-hidden", "true");
+                        list.appendChild(clone);
+                    });
+                }
+            } else {
+                strip.classList.remove("is-marquee");
+                list.querySelectorAll("[data-marquee-clone]").forEach((item) => item.remove());
+            }
+        });
+    };
+
+    setupMarquee();
+    window.addEventListener("resize", setupMarquee);
 }
 
 /* ==================================================
