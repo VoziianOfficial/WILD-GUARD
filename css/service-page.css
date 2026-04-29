@@ -180,6 +180,19 @@
     transform: none !important;
 }
 
+/* AOS sometimes injects inline translate transforms; keep these blocks fixed */
+.service-overview-card[data-aos],
+.service-overview-card.aos-init,
+.service-overview-card.aos-animate,
+.service-factors-media[data-aos],
+.service-factors-media.aos-init,
+.service-factors-media.aos-animate,
+.form-card.service-form[data-aos],
+.form-card.service-form.aos-init,
+.form-card.service-form.aos-animate {
+    transform: none !important;
+}
+
 .service-hero-image {
     position: absolute;
     inset: 0;
@@ -1093,6 +1106,78 @@
 
     .related-services-grid a {
         min-height: 230px;
+    }
+}
+
+/* tablet: keep service hero in desktop composition, only scale down */
+@media (min-width: 768px) and (max-width: 1120px) {
+    .service-hero {
+        padding-top: clamp(14px, 2.2vw, 22px);
+    }
+
+    .service-hero .container.service-hero-inner {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .service-hero-inner {
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        border-radius: 14px;
+    }
+
+    .service-hero-copy {
+        min-height: 320px;
+        padding: clamp(18px, 2.5vw, 28px) clamp(20px, 2.8vw, 34px);
+    }
+
+    .service-hero-copy h1 {
+        font-size: clamp(38px, 4.6vw, 52px);
+    }
+
+    .service-hero-copy p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .service-hero-benefits {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 14px;
+    }
+
+    .service-hero-benefit {
+        min-height: 40px;
+        font-size: 10.5px;
+    }
+
+    .service-hero-actions {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-top: 14px;
+    }
+
+    .service-hero-actions .btn {
+        width: auto;
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .service-hero-call {
+        min-height: 42px;
+        padding: 0 2px;
+        border-top: 0;
+    }
+
+    .service-hero-media {
+        min-height: 320px;
+    }
+
+    .service-hero-stamp {
+        right: 10px;
+        bottom: 10px;
+        width: 72px;
+        height: 72px;
     }
 }
 
