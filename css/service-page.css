@@ -1727,3 +1727,63 @@ body .related-services .related-route-card:nth-child(n) {
         font-size: 12px;
     }
 }
+
+
+/* ================= SERVICE SIGNS — ICON HOVER ONLY ================= */
+
+/* плавность только для иконок */
+.service-signs-list article i,
+.service-signs-list article svg {
+    transition:
+        transform 0.32s ease,
+        color 0.32s ease;
+    transform-origin: center;
+}
+
+/* карточки НЕ меняем */
+.service-signs-list article:hover {
+    transform: none;
+    background: inherit;
+    box-shadow: none;
+    border-color: inherit;
+}
+
+/* текст НЕ двигаем */
+.service-signs-list article:hover span {
+    transform: none;
+}
+
+/* 1 — ear */
+.service-signs-list article:nth-child(1):hover i,
+.service-signs-list article:nth-child(1):hover svg {
+    transform: rotate(-10deg) scale(1.14);
+    color: var(--color-accent-hover);
+}
+
+/* 2 — paw */
+.service-signs-list article:nth-child(2):hover i,
+.service-signs-list article:nth-child(2):hover svg {
+    transform: translateY(-4px) scale(1.14);
+    color: var(--color-accent-hover);
+}
+
+/* 3 — cable */
+.service-signs-list article:nth-child(3):hover i,
+.service-signs-list article:nth-child(3):hover svg {
+    transform: rotate(10deg) scale(1.14);
+    color: var(--color-accent-hover);
+}
+
+/* 4 — fingerprint */
+.service-signs-list article:nth-child(4):hover i,
+.service-signs-list article:nth-child(4):hover svg {
+    transform: scale(1.18);
+    color: var(--color-accent-hover);
+}
+
+/* 5 — house */
+.service-signs-list article:nth-child(5):hover i,
+.service-signs-list article:nth-child(5):hover svg {
+    transform: translateY(-3px) rotate(6deg) scale(1.12);
+    color: var(--color-accent-hover);
+}
