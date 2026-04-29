@@ -198,10 +198,6 @@
     margin-top: 12px;
 }
 
-.wildlife-type-card-dup {
-    display: none;
-}
-
 .wildlife-type-card {
     position: relative;
     display: grid;
@@ -210,6 +206,10 @@
     text-align: center;
     cursor: default;
     animation: wildlifeCardReveal 0.75s ease both;
+}
+
+.wildlife-type-card.wildlife-type-card-dup {
+    display: none;
 }
 
 .wildlife-type-card:nth-child(1) {
@@ -2095,6 +2095,45 @@
     }
 }
 
+/* ==================================================
+   WILDLIFE STRIP — MID BREAKPOINT (DESKTOP-LIKE)
+   Keeps the desktop composition between desktop and tablet.
+   ================================================== */
+
+@media (max-width: 1120px) and (min-width: 821px) {
+    .wildlife-types-row {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+        row-gap: 10px;
+    }
+
+    .wildlife-type-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .wildlife-type-card span {
+        font-size: 12px;
+    }
+
+    .wildlife-entry-block {
+        display: block !important;
+    }
+
+    .wildlife-strip-bottom {
+        grid-template-columns: 1fr 1.1fr !important;
+        padding-block: 0;
+    }
+
+    .wildlife-signs-grid {
+        width: auto;
+        margin-inline: 0;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        transform: translateX(18px);
+    }
+}
+
 @media (max-width: 820px) {
 
     .home-page .section,
@@ -2168,7 +2207,7 @@
         animation: none;
     }
 
-    .wildlife-type-card-dup {
+    .wildlife-type-card.wildlife-type-card-dup {
         display: grid;
     }
 

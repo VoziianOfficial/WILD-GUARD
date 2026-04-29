@@ -2083,4 +2083,104 @@ body {
     }
 }
 
+/* ==================================================
+   GLOBAL MICRO-INTERACTIONS
+   ================================================== */
+
+@keyframes wgIconFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes wgBadgeGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 0 rgba(139, 162, 118, 0);
+    }
+
+    50% {
+        box-shadow: 0 10px 24px rgba(139, 162, 118, 0.18);
+    }
+}
+
+:where(.section-kicker, .section-eyebrow, .service-hero-benefit, .wild-form-badge, .about-values-badge, .factors-media-badge) {
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+:where(.section-kicker, .section-eyebrow):hover {
+    border-color: rgba(139, 162, 118, 0.52);
+    background: rgba(221, 232, 212, 0.56);
+}
+
+:where(.section-kicker, .section-eyebrow, .service-hero-benefit, .wild-form-badge, .about-values-badge, .factors-media-badge):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(38, 51, 33, 0.1);
+}
+
+:where(.section-kicker svg, .section-eyebrow svg, .service-hero-benefit svg, .wild-form-badge svg, .about-values-badge svg, .factors-media-badge svg) {
+    transition:
+        color var(--transition),
+        transform var(--transition),
+        filter var(--transition);
+}
+
+:where(.section-kicker:hover svg, .section-eyebrow:hover svg, .service-hero-benefit:hover svg, .wild-form-badge:hover svg, .about-values-badge:hover svg, .factors-media-badge:hover svg) {
+    color: var(--color-accent-hover);
+    transform: scale(1.08);
+    filter: saturate(1.08);
+}
+
+:where(.form-card, .service-overview-card, .about-values-list article, .signal-cards article, .directory-card, .service-photo-card, .related-route-card, .request-checklist-card, .contact-guide-card, .mobile-contact-card) {
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+:where(.form-card, .service-overview-card, .about-values-list article, .signal-cards article, .request-checklist-card, .contact-guide-card):hover {
+    transform: translateY(-3px);
+    border-color: rgba(139, 162, 118, 0.42);
+    box-shadow: 0 18px 40px rgba(38, 51, 33, 0.12);
+}
+
+:where(.wildlife-type-icon, .directory-card-icon, .service-card-icon, .cookie-icon, .about-values-list article > span, .service-overview-card > span, .mobile-contact-card i) {
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+:where(.wildlife-type-card:hover .wildlife-type-icon, .directory-card:hover .directory-card-icon, .service-photo-card:hover .service-card-icon, .about-values-list article:hover > span, .service-overview-card:hover > span, .mobile-contact-card:hover i) {
+    transform: translateY(-2px) scale(1.05);
+    background: var(--color-dark);
+    color: var(--color-text-light);
+    box-shadow: 0 14px 24px rgba(38, 51, 33, 0.2);
+}
+
+:where(.wildlife-type-icon, .directory-card-icon, .service-card-icon, .cookie-icon) {
+    animation: wgIconFloat 3.8s ease-in-out infinite;
+}
+
+:where(.section-kicker, .section-eyebrow, .about-values-badge, .factors-media-badge) {
+    animation: wgBadgeGlow 4.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :where(.wildlife-type-icon, .directory-card-icon, .service-card-icon, .cookie-icon, .section-kicker, .section-eyebrow, .about-values-badge, .factors-media-badge) {
+        animation: none !important;
+    }
+}
 
