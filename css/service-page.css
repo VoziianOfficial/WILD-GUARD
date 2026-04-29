@@ -16,6 +16,18 @@
     margin-bottom: 0 !important;
 }
 
+.service-detail-page .section {
+    padding-block: clamp(44px, 5.6vw, 78px);
+}
+
+.service-detail-page .section-sm {
+    padding-block: clamp(28px, 4vw, 54px);
+}
+
+.service-detail-page .section-heading {
+    margin-bottom: clamp(18px, 2.8vw, 34px);
+}
+
 .service-hero .container.service-hero-inner {
     width: min(1480px, calc(100% - 36px));
 }

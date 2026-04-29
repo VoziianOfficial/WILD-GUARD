@@ -118,6 +118,13 @@
 .legal-sidebar {
     position: sticky;
     top: calc(var(--header-height) + 26px);
+    transform: none !important;
+}
+
+.legal-sidebar[data-aos],
+.legal-sidebar.aos-init,
+.legal-sidebar.aos-animate {
+    transform: none !important;
 }
 
 .legal-sidebar nav {

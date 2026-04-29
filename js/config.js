@@ -240,7 +240,7 @@ window.WILD_GUARD_CONFIG = {
                 "WILD GUARD helps homeowners connect with independent local wildlife service providers for humane removal, exclusion, and prevention options.",
             primaryButton: "Get Matched",
             secondaryButton: "View Services",
-            image: "assets/images/home/wildlife-hero-raccoon.jpg",
+            image: "assets/images/home/home-hero.jpg",
             imageAlt:
                 "Raccoon on a residential roof near trees, representing wildlife activity around a home",
         },
@@ -266,27 +266,27 @@ window.WILD_GUARD_CONFIG = {
         wildlifeTypes: [
             {
                 title: "Raccoons",
-                image: "assets/images/wildlife/raccoon.jpg",
+                image: "assets/images/home/animal-raccoon.png",
             },
             {
                 title: "Squirrels",
-                image: "assets/images/wildlife/squirrel.jpg",
+                image: "assets/images/home/animal-squirrel.png",
             },
             {
                 title: "Bats",
-                image: "assets/images/wildlife/bat.jpg",
+                image: "assets/images/home/animal-bat.png",
             },
             {
                 title: "Birds",
-                image: "assets/images/wildlife/bird.jpg",
+                image: "assets/images/home/animal-bird.png",
             },
             {
                 title: "Opossums",
-                image: "assets/images/wildlife/opossum.jpg",
+                image: "assets/images/home/animal-opossum.png",
             },
             {
                 title: "Skunks",
-                image: "assets/images/wildlife/skunk.jpg",
+                image: "assets/images/home/animal-skunk.png",
             },
         ],
 
