@@ -1114,7 +1114,8 @@ body {
 
 .faq-intro {
     position: sticky;
-    top: calc(var(--header-height) + 28px);
+    top: 45px!important;
+    align-self: start;
 }
 
 .faq-intro h2 {
