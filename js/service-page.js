@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD SERVICE PAGE JS
-   Shared page-specific logic for all service detail pages
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initServiceHeroMotion();
@@ -13,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initServiceFormMotion();
 });
 
-/* ==================================================
-   SERVICE HERO MOTION
-   ================================================== */
+
 
 function initServiceHeroMotion() {
     if (!window.gsap) return;
@@ -78,9 +73,7 @@ function initServiceHeroMotion() {
     }
 }
 
-/* ==================================================
-   SERVICE MEDIA MOTION
-   ================================================== */
+
 
 function initServiceMediaMotion() {
     if (!window.gsap || !window.ScrollTrigger) return;
@@ -144,9 +137,7 @@ function initServiceMediaMotion() {
     }
 }
 
-/* ==================================================
-   SERVICE CARDS TILT
-   ================================================== */
+
 
 function initServiceCardsTilt() {
     const cards = document.querySelectorAll(
@@ -182,9 +173,7 @@ function initServiceCardsTilt() {
 }
 
 
-/* ==================================================
-   RELATED SERVICES — SAFE ANIMATED HOVER
-   ================================================== */
+
 
 function initRelatedServicesTilt() {
     const cards = document.querySelectorAll(".related-services [data-related-card]");
@@ -212,9 +201,7 @@ function initRelatedServicesTilt() {
     });
 }
 
-/* ==================================================
-   SERVICE FORM MOTION
-   ================================================== */
+
 
 function initServiceFormMotion() {
     if (!window.gsap || !window.ScrollTrigger) return;

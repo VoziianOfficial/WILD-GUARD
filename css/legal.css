@@ -1,11 +1,6 @@
-/* ==================================================
-   LEGAL PAGES
-   privacy-policy.html
-   cookie-policy.html
-   terms-of-service.html
-   ================================================== */
 
-/* ================= LEGAL HERO ================= */
+
+
 
 .legal-hero {
     position: relative;
@@ -107,7 +102,7 @@
     color: var(--color-dark);
 }
 
-/* ================= LEGAL CONTENT ================= */
+
 
 .legal-content-section {
     background: var(--color-bg);
@@ -234,7 +229,7 @@
     box-shadow: 0 0 0 5px rgba(63, 79, 55, 0.08);
 }
 
-/* ================= LEGAL CONTACT ================= */
+
 
 .legal-contact-box {
     display: grid;
@@ -280,7 +275,7 @@
     color: var(--color-text-light);
 }
 
-/* ================= DISCLAIMER BOX ================= */
+
 
 .legal-disclaimer-box {
     padding: clamp(20px, 3vw, 30px);
@@ -302,7 +297,7 @@
     line-height: 1.75;
 }
 
-/* ================= PAGE ACCENTS ================= */
+
 
 .privacy-policy-page .legal-hero-card::before {
     background: var(--color-accent-soft);
@@ -316,9 +311,7 @@
     background: var(--color-bg-soft);
 }
 
-/* ==================================================
-   RESPONSIVE LEGAL
-   ================================================== */
+
 
 @media (max-width: 1120px) {
     .legal-layout {

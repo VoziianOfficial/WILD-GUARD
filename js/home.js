@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD HOME JS
-   Page-specific logic for index.html
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initHeroMotion();
@@ -13,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSmoothFaq();
 });
 
-/* ==================================================
-   WILDLIFE SLIDER
-   ================================================== */
+
 
 function initWildlifeSlider() {
     const slider = document.querySelector("[data-wildlife-slider]");
@@ -56,9 +51,7 @@ function initWildlifeSlider() {
     });
 }
 
-/* ==================================================
-   HERO MOTION
-   ================================================== */
+
 
 function initHeroMotion() {
     if (!window.gsap) return;
@@ -126,9 +119,7 @@ function initHeroMotion() {
     }
 }
 
-/* ==================================================
-   SERVICE CARDS 3D TILT
-   ================================================== */
+
 
 function initServiceCardsTilt() {
     const cards = document.querySelectorAll(".service-photo-card, .wildlife-card");
@@ -161,9 +152,7 @@ function initServiceCardsTilt() {
     });
 }
 
-/* ==================================================
-   ENTRY POINTS MOTION
-   ================================================== */
+
 
 function initEntryPointMotion() {
     if (!window.gsap) return;
@@ -184,9 +173,7 @@ function initEntryPointMotion() {
     });
 }
 
-/* ==================================================
-   HOME SERVICES SWIPER ON TABLET / MOBILE
-   ================================================== */
+
 
 
 let homeServicesSwiper = null;
@@ -263,9 +250,7 @@ function initHomeServicesSwiper() {
     breakpoint.addEventListener("change", checkMode);
 }
 
-/* ==================================================
-   SMOOTH FAQ ACCORDION
-   ================================================== */
+
 
 function initSmoothFaq() {
     const items = document.querySelectorAll(".faq-list details");

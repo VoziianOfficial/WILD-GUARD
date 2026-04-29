@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD CONTACT JS
-   Page-specific logic for contact.html
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initContactHeroMotion();
@@ -13,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFormSoftMotion();
 });
 
-/* ==================================================
-   HERO MOTION
-   ================================================== */
+
 
 function initContactHeroMotion() {
     if (!window.gsap) return;
@@ -70,9 +65,7 @@ function initContactHeroMotion() {
     }
 }
 
-/* ==================================================
-   ABSTRACT MAP MOTION
-   ================================================== */
+
 
 function initContactMapMotion() {
     if (!window.gsap) return;
@@ -141,9 +134,7 @@ function initContactMapMotion() {
     });
 }
 
-/* ==================================================
-   CONTACT STEPS SWIPER (MOBILE)
-   ================================================== */
+
 
 let contactStepsSwiper = null;
 
@@ -197,9 +188,7 @@ function initContactStepsSwiper() {
     breakpoint.addEventListener("change", checkMode);
 }
 
-/* ==================================================
-   CONTACT CARDS TILT
-   ================================================== */
+
 
 function initContactCardsTilt() {
     const cards = document.querySelectorAll(
@@ -234,9 +223,7 @@ function initContactCardsTilt() {
     });
 }
 
-/* ==================================================
-   FORM SOFT MOTION
-   ================================================== */
+
 
 function initFormSoftMotion() {
     if (!window.gsap || !window.ScrollTrigger) return;

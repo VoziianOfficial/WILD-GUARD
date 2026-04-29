@@ -1,4 +1,4 @@
-/* ================= HERO — DARK PHOTO STYLE ================= */
+
 
 .home-hero.section {
     position: relative;
@@ -155,7 +155,7 @@
         width: 100%;
     }
 }
-/* ================= WILDLIFE STRIP ================= */
+
 .wildlife-strip.section-sm {
     position: relative;
     overflow: hidden;
@@ -472,7 +472,7 @@
     background: transparent;
 }
 
-/* ================= SERVICES ================= */
+
 .home-services {
     position: relative;
     overflow: hidden;
@@ -737,7 +737,7 @@
     }
 }
 
-/* ================= PROCESS ================= */
+
 .process-section {
     position: relative;
     overflow: hidden;
@@ -850,7 +850,7 @@
     line-height: 1.42;
 }
 
-/* ================= SIGNS / MAP SECTION ================= */
+
 .signs-section {
     position: relative;
     overflow: hidden;
@@ -1150,7 +1150,7 @@
     line-height: 1.38;
 }
 
-/* ================= MATCH CTA SECTION ================= */
+
 .home-match-section {
     position: relative;
     overflow: hidden;
@@ -1338,7 +1338,7 @@
     margin-top: 1px;
 }
 
-/* ================= MATCH FORM — SUPPORTS BOTH OLD AND NEW HTML ================= */
+
 .wild-match-form,
 .match-form.form-card {
     position: relative;
@@ -1525,7 +1525,7 @@
     color: rgba(111, 117, 107, 0.68);
 }
 
-/* New checkbox */
+
 .wild-consent,
 .match-form .match-check {
     position: relative;
@@ -1653,7 +1653,7 @@
     text-align: center;
 }
 
-/* ================= FAQ ================= */
+
 .faq-section {
     position: relative;
     overflow: hidden;
@@ -1745,7 +1745,7 @@
     transform: translateY(0);
 }
 
-/* ================= FINAL CTA ================= */
+
 .final-cta {
     padding-block: clamp(24px, 3vw, 42px);
     background: var(--color-bg);
@@ -1808,7 +1808,7 @@
     min-width: 220px;
 }
 
-/* ================= ANIMATIONS ================= */
+
 @keyframes wildlifeSoftFloat {
 
     0%,
@@ -1857,7 +1857,7 @@
     }
 }
 
-/* ================================================== RESPONSIVE ================================================== */
+
 @media (max-width: 1120px) {
     .home-page .section {
         padding-block: 32px;
@@ -2095,10 +2095,7 @@
     }
 }
 
-/* ==================================================
-   WILDLIFE STRIP — MID BREAKPOINT (DESKTOP-LIKE)
-   Keeps the desktop composition between desktop and tablet.
-   ================================================== */
+
 
 @media (max-width: 1120px) and (min-width: 821px) {
     .wildlife-types-row {
@@ -2760,7 +2757,7 @@
     }
 }
 
-/* ================= ACCESSIBILITY ================= */
+
 @media (prefers-reduced-motion: reduce) {
 
     .wildlife-type-card,
@@ -2779,15 +2776,13 @@
     }
 }
 
-/* защита от горизонтального скролла */
+
 html,
 body {
     overflow-x: hidden;
 }
 
-/* ==================================================
-   HERO TOP SPACING + CENTER SHELL FIX
-   ================================================== */
+
 
 .home-page .home-hero.section {
     padding-top: 0 !important;
@@ -2805,9 +2800,7 @@ body {
     padding-top: clamp(24px, 3.5vw, 44px) !important;
 }
 
-/* ==================================================
-   SMOOTH PAGE LOAD FIX
-   ================================================== */
+
 
 .home-hero-copy,
 .home-hero-photo {
@@ -2847,14 +2840,12 @@ body {
     }
 }
 
-/* AOS мягче */
+
 [data-aos] {
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
-/* ==================================================
-   RESPONSIVE HERO FIX
-   ================================================== */
+
 
 @media (max-width: 1120px) {
     .home-hero-shell {
@@ -2892,9 +2883,7 @@ body {
     }
 }
 
-/* ==================================================
-   REDUCED MOTION
-   ================================================== */
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2917,14 +2906,14 @@ body {
     }
 }
 
-/* защита от горизонтального скролла */
+
 html,
 body {
     overflow-x: hidden;
 }
 
 
-/* ================= HOME MATCH — TABLET FINAL FIX ================= */
+
 
 @media (min-width: 768px) and (max-width: 1120px) {
     .home-match-section.section {

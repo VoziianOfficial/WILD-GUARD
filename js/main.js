@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD MAIN JS
-   Shared behavior for all pages
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const config = window.WILD_GUARD_CONFIG;
@@ -24,14 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
     initSmoothAnchorScroll();
     initServiceSignsMarquee();
 
-    /* важно: готовим анимации ДО запуска AOS */
+    
     prepareAnimationElements();
     initLibraries();
 });
 
-/* ==================================================
-   GLOBAL CONFIG INJECTION
-   ================================================== */
+
 
 function applyGlobalConfig(config) {
     const company = config.company;
@@ -91,9 +86,7 @@ function setText(selector, value) {
     });
 }
 
-/* ==================================================
-   CURRENT YEAR
-   ================================================== */
+
 
 function initCurrentYear() {
     const year = new Date().getFullYear();
@@ -103,9 +96,7 @@ function initCurrentYear() {
     });
 }
 
-/* ==================================================
-   STICKY HEADER
-   ================================================== */
+
 
 function initHeaderScroll() {
     const header = document.querySelector("[data-header]");
@@ -123,9 +114,7 @@ function initHeaderScroll() {
     });
 }
 
-/* ==================================================
-   MOBILE MENU
-   ================================================== */
+
 
 function initMobileMenu() {
     const body = document.body;
@@ -196,9 +185,7 @@ function initMobileMenu() {
     });
 }
 
-/* ==================================================
-   COOKIE BANNER
-   ================================================== */
+
 
 function initCookieBanner(config) {
     const banner = document.querySelector("[data-cookie-banner]");
@@ -230,9 +217,7 @@ function initCookieBanner(config) {
     });
 }
 
-/* ==================================================
-   FORMS
-   ================================================== */
+
 
 function initForms(config) {
     const forms = document.querySelectorAll("[data-contact-form]");
@@ -302,9 +287,7 @@ function showFormMessage(form, message, type) {
     messageElement.classList.add(type === "success" ? "is-success" : "is-error");
 }
 
-/* ==================================================
-   FAQ ICON STATE
-   ================================================== */
+
 
 function initFaqIcons() {
     const detailsItems = document.querySelectorAll(".faq-list details");
@@ -324,9 +307,7 @@ function initFaqIcons() {
     });
 }
 
-/* ==================================================
-   GLOW CARD EFFECT
-   ================================================== */
+
 
 function initGlowCards() {
     const cards = document.querySelectorAll(
@@ -345,9 +326,7 @@ function initGlowCards() {
     });
 }
 
-/* ==================================================
-   SMOOTH ANCHOR SCROLL
-   ================================================== */
+
 
 function initSmoothAnchorScroll() {
     const links = document.querySelectorAll('a[href^="#"]:not([href="#"])');
@@ -374,9 +353,7 @@ function initSmoothAnchorScroll() {
     });
 }
 
-/* ==================================================
-   SERVICE SIGNS MARQUEE (tablet/mobile)
-   ================================================== */
+
 
 function initServiceSignsMarquee() {
     const strips = document.querySelectorAll(".service-signs-strip");
@@ -414,10 +391,7 @@ function initServiceSignsMarquee() {
     window.addEventListener("resize", setupMarquee);
 }
 
-/* ==================================================
-   ANIMATION PREPARE
-   Убираем двойные анимации, из-за которых контент дергается
-   ================================================== */
+
 
 function prepareAnimationElements() {
     const heroItems = document.querySelectorAll(
@@ -444,9 +418,7 @@ function prepareAnimationElements() {
     }
 }
 
-/* ==================================================
-   LIBRARIES
-   ================================================== */
+
 
 function initLibraries() {
     if (window.lucide) {

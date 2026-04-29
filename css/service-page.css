@@ -1,14 +1,6 @@
-/* ==================================================
-   SERVICE DETAIL PAGES
-   wildlife-removal.html
-   raccoon-removal.html
-   squirrel-removal.html
-   bat-removal.html
-   bird-control.html
-   exclusion-prevention.html
-   ================================================== */
 
-/* ================= SERVICE HERO ================= */
+
+
 
 .service-hero {
     position: relative;
@@ -18,7 +10,7 @@
     background: var(--color-bg-soft);
 }
 
-/* service pages: hero should not keep section bottom spacing */
+
 .service-hero.section {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
@@ -57,7 +49,7 @@
     background: linear-gradient(180deg, rgba(247, 244, 234, 0.96), rgba(244, 240, 228, 0.96));
 }
 
-/* Keep a consistent surface color during AOS init/animate states */
+
 .service-hero-copy.aos-init,
 .service-hero-copy.aos-animate {
     background: var(--color-bg-soft) !important;
@@ -179,14 +171,14 @@
     border-radius: 0;
 }
 
-/* AOS sometimes injects inline translate transforms; keep hero media fixed in place */
+
 .service-hero-media[data-aos],
 .service-hero-media.aos-init,
 .service-hero-media.aos-animate {
     transform: none !important;
 }
 
-/* AOS sometimes injects inline translate transforms; keep these blocks fixed */
+
 .service-overview-card[data-aos],
 .service-overview-card.aos-init,
 .service-overview-card.aos-animate,
@@ -249,7 +241,7 @@
     backdrop-filter: blur(16px);
 }
 
-/* photo-like hero: hide pill badges */
+
 .service-hero-badge {
     display: none;
 }
@@ -324,7 +316,7 @@
     text-transform: uppercase;
 }
 
-/* ================= OVERVIEW ================= */
+
 
 .service-overview {
     background: var(--color-bg-soft);
@@ -424,7 +416,7 @@
     line-height: 1.3;
 }
 
-/* ================= PROVIDER QUESTIONS ================= */
+
 
 .service-questions {
     position: relative;
@@ -542,7 +534,7 @@
     line-height: 1.7;
 }
 
-/* ================= FACTORS ================= */
+
 
 .service-factors {
     background: var(--color-bg-muted);
@@ -688,7 +680,7 @@
     line-height: 1.52;
 }
 
-/* ================= MATCH SECTION ================= */
+
 
 .service-match-section {
     position: relative;
@@ -771,7 +763,7 @@
     padding: clamp(20px, 3vw, 28px);
 }
 
-/* ================= RELATED SERVICES ================= */
+
 
 .related-services {
     background: var(--color-bg);
@@ -859,9 +851,7 @@
     backdrop-filter: blur(10px);
 }
 
-/* ==================================================
-   PAGE-SPECIFIC SMALL ACCENTS
-   ================================================== */
+
 
 .squirrel-removal-page .service-overview,
 .bird-control-page .service-overview {
@@ -874,9 +864,7 @@
         var(--color-bg-soft);
 }
 
-/* ==================================================
-   RESPONSIVE SERVICE PAGES
-   ================================================== */
+
 
 @media (max-width: 1120px) {
     .service-hero .container.service-hero-inner {
@@ -1119,7 +1107,7 @@
     }
 }
 
-/* tablet: keep service hero in desktop composition, only scale down */
+
 @media (min-width: 768px) and (max-width: 1120px) {
     .service-hero {
         padding-top: clamp(14px, 2.2vw, 22px);
@@ -1191,10 +1179,7 @@
     }
 }
 
-/* ==================================================
-   SERVICE PAGE INDIVIDUALITY UPGRADE
-   Makes each service page feel visually different
-   ================================================== */
+
 
 
 .raccoon-removal-page .service-overview-card {
@@ -1316,7 +1301,7 @@
 }
 
 
-/* ================= RELATED SERVICES VARIATION ================= */
+
 
 .raccoon-removal-page .related-services-grid a:nth-child(odd),
 .bat-removal-page .related-services-grid a:nth-child(odd) {
@@ -1333,7 +1318,7 @@
 }
 
 
-/* ================= RESPONSIVE FIXES FOR VARIATIONS ================= */
+
 
 @media (max-width: 1120px) {
     .bird-control-page .service-overview-layout {
@@ -1369,7 +1354,7 @@
 }
 
 
-/* ================= SERVICE SIGNS STRIP ================= */
+
 
 .service-signs-strip {
     padding: 16px 0;
@@ -1433,7 +1418,7 @@
     }
 }
 
-/* tablet + mobile: infinite running strip */
+
 @media (max-width: 1120px) {
     .service-signs-strip {
         padding: 10px 0;
@@ -1545,9 +1530,7 @@
 }
 
 
-/* ==================================================
-   RELATED SERVICES — HORIZONTAL DESIGNER ROW
-   ================================================== */
+
 
 .related-services {
     position: relative;
@@ -1598,7 +1581,7 @@
     line-height: 1.7;
 }
 
-/* row */
+
 .related-services-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1606,7 +1589,7 @@
     align-items: stretch;
 }
 
-/* card reset + design */
+
 body .related-services .related-route-card,
 body .related-services .related-route-card:nth-child(n) {
     position: relative;
@@ -1767,7 +1750,7 @@ body .related-services .related-route-card:nth-child(n) {
         background var(--transition);
 }
 
-/* hover animation */
+
 .related-route-card:hover {
     transform: translateY(-8px) scale(1.025) !important;
     border-color: rgba(247, 246, 241, 0.42);
@@ -1793,7 +1776,7 @@ body .related-services .related-route-card:nth-child(n) {
     outline-offset: 4px;
 }
 
-/* tablet: keep one horizontal row with scroll */
+
 @media (max-width: 1120px) {
     .related-services-header {
         grid-template-columns: 1fr;
@@ -1843,7 +1826,7 @@ body .related-services .related-route-card:nth-child(n) {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .related-services-header h2 {
         font-size: clamp(36px, 12vw, 50px);
@@ -1880,9 +1863,9 @@ body .related-services .related-route-card:nth-child(n) {
 }
 
 
-/* ================= SERVICE SIGNS — ICON HOVER ONLY ================= */
 
-/* плавность только для иконок */
+
+
 .service-signs-list article i,
 .service-signs-list article svg {
     transition:
@@ -1891,7 +1874,7 @@ body .related-services .related-route-card:nth-child(n) {
     transform-origin: center;
 }
 
-/* карточки НЕ меняем */
+
 .service-signs-list article:hover {
     transform: none;
     background: inherit;
@@ -1899,47 +1882,47 @@ body .related-services .related-route-card:nth-child(n) {
     border-color: inherit;
 }
 
-/* текст НЕ двигаем */
+
 .service-signs-list article:hover span {
     transform: none;
 }
 
-/* 1 — ear */
+
 .service-signs-list article:nth-child(1):hover i,
 .service-signs-list article:nth-child(1):hover svg {
     transform: rotate(-10deg) scale(1.14);
     color: var(--color-accent-hover);
 }
 
-/* 2 — paw */
+
 .service-signs-list article:nth-child(2):hover i,
 .service-signs-list article:nth-child(2):hover svg {
     transform: translateY(-4px) scale(1.14);
     color: var(--color-accent-hover);
 }
 
-/* 3 — cable */
+
 .service-signs-list article:nth-child(3):hover i,
 .service-signs-list article:nth-child(3):hover svg {
     transform: rotate(10deg) scale(1.14);
     color: var(--color-accent-hover);
 }
 
-/* 4 — fingerprint */
+
 .service-signs-list article:nth-child(4):hover i,
 .service-signs-list article:nth-child(4):hover svg {
     transform: scale(1.18);
     color: var(--color-accent-hover);
 }
 
-/* 5 — house */
+
 .service-signs-list article:nth-child(5):hover i,
 .service-signs-list article:nth-child(5):hover svg {
     transform: translateY(-3px) rotate(6deg) scale(1.12);
     color: var(--color-accent-hover);
 }
 
-/* ================= SERVICE MATCH — PHOTO BACKGROUND ================= */
+
 
 .service-match-section.section {
     position: relative;
@@ -1948,7 +1931,7 @@ body .related-services .related-route-card:nth-child(n) {
     background: var(--color-dark-deep);
 }
 
-/* фото */
+
 .service-match-section.section::before {
     content: "";
     position: absolute;
@@ -1959,7 +1942,7 @@ body .related-services .related-route-card:nth-child(n) {
     transform: scale(1.04);
 }
 
-/* мягкий затемняющий слой */
+
 .service-match-section.section::after {
     content: "";
     position: absolute;
@@ -1976,13 +1959,13 @@ body .related-services .related-route-card:nth-child(n) {
     pointer-events: none;
 }
 
-/* чтобы контент был поверх фото */
+
 .service-match-section.section .container {
     position: relative;
     z-index: 2;
 }
 
-/* текст на темном фоне */
+
 .service-match-section .service-match-copy h2,
 .service-match-section .service-match-copy .section-eyebrow {
     color: var(--color-text-light);
@@ -1992,7 +1975,7 @@ body .related-services .related-route-card:nth-child(n) {
     color: rgba(247, 246, 241, 0.76);
 }
 
-/* карточки внутри секции */
+
 .service-match-section .service-match-points article,
 .service-match-section .service-form {
     border-color: rgba(247, 246, 241, 0.16);
@@ -2000,7 +1983,7 @@ body .related-services .related-route-card:nth-child(n) {
     backdrop-filter: blur(14px);
 }
 
-/* mobile */
+
 @media (max-width: 767px) {
     .service-match-section.section::after {
         background:
@@ -2011,7 +1994,7 @@ body .related-services .related-route-card:nth-child(n) {
     }
 }
 
-/* tablet: factor cards with top-right icon and compact height */
+
 @media (min-width: 561px) and (max-width: 1120px) {
     .service-factors.section-sm .factor-list article {
         position: relative;

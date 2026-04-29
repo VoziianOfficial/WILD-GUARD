@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD SERVICES JS
-   Page-specific logic for services.html
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initServicesHeroMotion();
@@ -11,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProviderFitMotion();
 });
 
-/* ==================================================
-   HERO ORBIT MOTION
-   ================================================== */
+
 
 function initServicesHeroMotion() {
     if (!window.gsap) return;
@@ -75,9 +70,7 @@ function initServicesHeroMotion() {
     }
 }
 
-/* ==================================================
-   DIRECTORY CARDS 3D TILT
-   ================================================== */
+
 
 function initDirectoryCardTilt() {
     const cards = document.querySelectorAll(".directory-card");
@@ -110,9 +103,7 @@ function initDirectoryCardTilt() {
     });
 }
 
-/* ==================================================
-   PROVIDER FIT MOTION
-   ================================================== */
+
 
 function initProviderFitMotion() {
     if (!window.gsap || !window.ScrollTrigger) return;

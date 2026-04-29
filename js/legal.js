@@ -1,10 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD LEGAL JS
-   Shared logic for privacy-policy.html, cookie-policy.html,
-   terms-of-service.html
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initLegalSidebarHighlight();
@@ -12,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initLegalDocumentMotion();
 });
 
-/* ==================================================
-   ACTIVE SIDEBAR LINK ON SCROLL
-   ================================================== */
+
 
 function initLegalSidebarHighlight() {
     const sidebarLinks = document.querySelectorAll(".legal-sidebar a");
@@ -70,9 +64,7 @@ function initLegalSidebarHighlight() {
     });
 }
 
-/* ==================================================
-   HERO MOTION
-   ================================================== */
+
 
 function initLegalHeroMotion() {
     if (!window.gsap) return;
@@ -118,9 +110,7 @@ function initLegalHeroMotion() {
     }
 }
 
-/* ==================================================
-   DOCUMENT MOTION
-   ================================================== */
+
 
 function initLegalDocumentMotion() {
     if (!window.gsap || !window.ScrollTrigger) return;

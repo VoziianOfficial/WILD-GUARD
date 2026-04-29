@@ -1,9 +1,6 @@
 "use strict";
 
-/* ==================================================
-   WILD GUARD ABOUT JS
-   Page-specific logic for about.html
-   ================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAboutHeroMotion();
@@ -11,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initAboutCardsTilt();
 });
 
-/* ==================================================
-   HERO PHOTO COMPOSITION MOTION
-   ================================================== */
+
 
 function initAboutHeroMotion() {
     if (!window.gsap) return;
@@ -74,9 +69,7 @@ function initAboutHeroMotion() {
     }
 }
 
-/* ==================================================
-   VALUES IMAGE MOTION
-   ================================================== */
+
 
 function initAboutValuesMotion() {
     if (!window.gsap || !window.ScrollTrigger) return;
@@ -117,9 +110,7 @@ function initAboutValuesMotion() {
     }
 }
 
-/* ==================================================
-   CARD TILT EFFECT
-   ================================================== */
+
 
 function initAboutCardsTilt() {
     const cards = document.querySelectorAll(

@@ -1,10 +1,6 @@
-/* ==================================================
-   ABOUT PAGE
-   ================================================== */
 
-/* ==================================================
-   ABOUT HERO — QUIET LUXURY REDESIGN
-   ================================================== */
+
+
 
 .about-hero.section {
     position: relative;
@@ -124,7 +120,7 @@
     border-radius: 0;
 }
 
-/* right info panel */
+
 .about-hero-info {
     position: relative;
     padding: 16px;
@@ -252,7 +248,7 @@
     line-height: 1.45;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-hero.section {
         min-height: auto;
@@ -300,7 +296,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .about-hero-inner {
         padding-block: 44px 24px;
@@ -332,7 +328,7 @@
         font-size: 26px;
     }
 }
-/* ================= STORY ================= */
+
 
 .about-story {
     background: var(--color-bg-soft);
@@ -404,7 +400,7 @@
     line-height: 1.78;
 }
 
-/* ================= MODEL ================= */
+
 
 .about-model {
     background: var(--color-bg);
@@ -509,7 +505,7 @@
     line-height: 1.7;
 }
 
-/* ================= VALUES ================= */
+
 
 .about-values {
     position: relative;
@@ -651,7 +647,7 @@
     line-height: 1.6;
 }
 
-/* ================= ABOUT HELP — PROCESS BOARD ================= */
+
 
 .about-help-shell {
     display: grid;
@@ -660,7 +656,7 @@
     align-items: center;
 }
 
-/* левая часть */
+
 .about-help-left {
     max-width: 420px;
 }
@@ -678,14 +674,14 @@
     color: rgba(28, 36, 25, 0.65);
 }
 
-/* шаги */
+
 .about-help-steps {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
-/* карточка = тонкая плашка */
+
 .about-help-steps article {
     position: relative;
     padding: 14px 56px 14px 16px;
@@ -710,7 +706,7 @@
     color: rgba(247, 246, 241, 0.92);
 }
 
-/* линия сверху */
+
 .about-help-steps article::before {
     content: "";
     position: absolute;
@@ -723,7 +719,7 @@
     background: #8ba278;
 }
 
-/* номер */
+
 .about-help-steps span {
     display: block;
     font-size: 10px;
@@ -732,14 +728,14 @@
     color: #8ba278;
 }
 
-/* заголовок */
+
 .about-help-steps h3 {
     margin-top: 4px;
     font-size: 14px;
     font-weight: 800;
 }
 
-/* текст */
+
 .about-help-steps p {
     margin-top: 3px;
     font-size: 12.5px;
@@ -747,7 +743,7 @@
     color: rgba(28, 36, 25, 0.65);
 }
 
-/* 🔥 hover */
+
 .about-help-steps article:hover {
     background: #1c2419;
     border-color: #1c2419;
@@ -769,7 +765,7 @@
     background: #b7d48c;
 }
 
-/* ================= MOBILE ================= */
+
 
 @media (max-width: 900px) {
     .about-help-shell {
@@ -787,7 +783,7 @@
         grid-template-columns: 1fr;
     }
 }
-/* ================= CTA ================= */
+
 
 .about-cta {
     background: var(--color-bg);
@@ -852,9 +848,7 @@
     min-width: 240px;
 }
 
-/* ==================================================
-   RESPONSIVE ABOUT
-   ================================================== */
+
 
 @media (max-width: 1240px) {
     .about-values-layout {
@@ -1034,9 +1028,7 @@
     }
 }
 
-/* ==================================================
-   ABOUT PAGE — REDUCE SECTION GAPS
-   ================================================== */
+
 
 .about-page main>section {
     margin: 0 !important;
@@ -1050,12 +1042,12 @@
     padding-block: clamp(20px, 2.8vw, 36px) !important;
 }
 
-/* hero не трогаем */
+
 .about-page .about-hero.section {
     padding: 0 !important;
 }
 
-/* CTA и FAQ чуть плотнее */
+
 .about-page .about-cta.section-sm,
 .about-page .faq-section.section-sm {
     padding-block: clamp(18px, 2.4vw, 30px) !important;
@@ -1075,11 +1067,11 @@
     }
 }
 
-/* ================= TABLET OPTIMIZATION ================= */
+
 
 @media (max-width: 980px) {
 
-    /* сужаем всю секцию */
+    
     .about-help .container {
         max-width: 720px;
     }
@@ -1090,7 +1082,7 @@
         text-align: center;
     }
 
-    /* текст компактнее */
+    
     .about-help-left {
         max-width: 560px;
         margin: 0 auto;
@@ -1106,14 +1098,14 @@
         margin-top: 10px;
     }
 
-    /* 🔥 самое важное — сетка шагов */
+    
     .about-help-steps {
         grid-template-columns: repeat(2, 1fr);
-        /* НЕ 1 колонка */
+        
         gap: 8px;
     }
 
-    /* карточки компактнее */
+    
     .about-help-steps article {
         padding: 10px 48px 10px 12px;
         border-radius: 12px;
@@ -1139,17 +1131,17 @@
         font-size: 9px;
     }
 
-    /* линия аккуратнее */
+    
     .about-help-steps article::before {
         width: 18px;
     }
 }
 
-/* ================= ABOUT VALUES — TABLET COMPACT ================= */
+
 
 @media (max-width: 980px) {
 
-    /* ограничиваем ширину всей секции */
+    
     .about-values .container {
         max-width: 720px;
     }
@@ -1160,13 +1152,13 @@
         align-items: center;
     }
 
-    /* картинка */
+    
     .about-values-media {
         min-height: 320px;
         border-radius: 28px 64px 28px 28px;
     }
 
-    /* текст */
+    
     .about-values-copy {
         max-width: 560px;
         margin: 0 auto;
@@ -1183,7 +1175,7 @@
         margin-top: 10px;
     }
 
-    /* список — ключевое */
+    
     .about-values-list {
         margin-top: 16px;
         gap: 8px;
@@ -1193,7 +1185,7 @@
         padding: 12px;
         border-radius: 16px;
 
-        /* делаем компактнее структуру */
+        
         grid-template-columns: 36px 1fr;
         gap: 10px;
     }
@@ -1214,14 +1206,14 @@
         margin-top: 4px;
     }
 
-    /* бейдж на картинке */
+    
     .about-values-badge {
         font-size: 11px;
         padding: 10px 12px;
     }
 }
 
-/* TABLET — убираем фото */
+
 @media (max-width: 980px) and (min-width: 561px) {
     .about-values-media {
         display: none !important;
@@ -1238,7 +1230,7 @@
     }
 }
 
-/* MOBILE — возвращаем фото обратно */
+
 @media (max-width: 560px) {
     .about-values-media {
         display: block !important;
