@@ -119,6 +119,12 @@
     border-radius: 0;
 }
 
+.contact-request-row {
+    display: grid;
+    gap: 14px;
+    align-items: stretch;
+}
+
 .contact-request-panel {
     position: relative;
     padding: 18px;
@@ -127,6 +133,80 @@
     background: rgba(7, 12, 7, 0.46);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(18px);
+}
+
+.contact-request-helper {
+    display: none;
+    position: relative;
+    padding: 18px;
+    border: 1px solid rgba(247, 246, 241, 0.16);
+    border-radius: 30px;
+    background: rgba(7, 12, 7, 0.46);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(18px);
+    color: var(--color-text-light);
+}
+
+.contact-request-helper > span {
+    display: block;
+    color: rgba(247, 246, 241, 0.62);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-request-helper h3 {
+    margin-top: 10px;
+    color: rgba(247, 246, 241, 0.92);
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.contact-request-helper ul {
+    display: grid;
+    gap: 10px;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-request-helper li {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 10px;
+    border: 1px solid rgba(247, 246, 241, 0.12);
+    border-radius: 16px;
+    background: rgba(247, 246, 241, 0.07);
+}
+
+.contact-request-helper li svg {
+    width: 38px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(247, 246, 241, 0.9);
+    color: var(--color-dark-deep);
+}
+
+.contact-request-helper strong {
+    display: block;
+    color: rgba(247, 246, 241, 0.92);
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.contact-request-helper p {
+    margin-top: 4px;
+    color: rgba(247, 246, 241, 0.68);
+    font-size: 12px;
+    line-height: 1.45;
 }
 
 .contact-request-panel::before {
@@ -1009,6 +1089,27 @@
 
     .contact-guide-list article:hover {
         transform: none;
+    }
+}
+
+/* HERO QUIZ: TABLET SHOW HELPER CARD NEXT TO QUIZ */
+@media (min-width: 768px) and (max-width: 980px) {
+    .contact-request-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        width: min(100%, 980px);
+        margin-inline: auto;
+        align-items: stretch;
+    }
+
+    .contact-request-panel {
+        width: auto;
+        margin-inline: 0;
+        height: 100%;
+    }
+
+    .contact-request-helper {
+        display: block;
+        height: 100%;
     }
 }
 

@@ -232,56 +232,87 @@
                     </div>
                 </div>
 
-                <div class="contact-request-panel quiz-panel" data-aos="fade-left" data-aos-delay="120">
-                    <div class="quiz-progress">
-                        <span data-quiz-step-text>Step 1 of 3</span>
-                        <div><i data-quiz-progress></i></div>
-                    </div>
-
-                    <div class="quiz-step is-active" data-step="1">
-                        <span class="quiz-kicker">What happened?</span>
-                        <h3>What did you notice?</h3>
-
-                        <div class="quiz-options">
-                            <button type="button" data-value="Noises">Noises in attic/walls</button>
-                            <button type="button" data-value="Animal seen">Animal seen outside</button>
-                            <button type="button" data-value="Droppings">Droppings or tracks</button>
-                            <button type="button" data-value="Entry gap">Possible entry gap</button>
-                        </div>
-                    </div>
-
-                    <div class="quiz-step" data-step="2">
-                        <span class="quiz-kicker">Where is it?</span>
-                        <h3>Where do you see activity?</h3>
-
-                        <div class="quiz-options">
-                            <button type="button" data-value="Attic">Attic / ceiling</button>
-                            <button type="button" data-value="Roofline">Roofline / vents</button>
-                            <button type="button" data-value="Garage">Garage / crawlspace</button>
-                            <button type="button" data-value="Yard">Yard / exterior</button>
-                        </div>
-                    </div>
-
-                    <div class="quiz-step" data-step="3">
-                        <span class="quiz-kicker">Contact details</span>
-                        <h3>Where should providers contact you?</h3>
-
-                        <div class="quiz-fields">
-                            <input type="text" placeholder="ZIP code" data-quiz-zip>
-                            <input type="tel" placeholder="Phone number" data-quiz-phone>
+                <div class="contact-request-row" data-aos="fade-left" data-aos-delay="120">
+                    <div class="contact-request-panel quiz-panel">
+                        <div class="quiz-progress">
+                            <span data-quiz-step-text>Step 1 of 3</span>
+                            <div><i data-quiz-progress></i></div>
                         </div>
 
-                        <p class="quiz-error" data-quiz-error></p>
+                        <div class="quiz-step is-active" data-step="1">
+                            <span class="quiz-kicker">What happened?</span>
+                            <h3>What did you notice?</h3>
 
-                        <button type="button" class="quiz-submit">
-                            Request Matches
-                            <i data-lucide="arrow-up-right"></i>
-                        </button>
+                            <div class="quiz-options">
+                                <button type="button" data-value="Noises">Noises in attic/walls</button>
+                                <button type="button" data-value="Animal seen">Animal seen outside</button>
+                                <button type="button" data-value="Droppings">Droppings or tracks</button>
+                                <button type="button" data-value="Entry gap">Possible entry gap</button>
+                            </div>
+                        </div>
+
+                        <div class="quiz-step" data-step="2">
+                            <span class="quiz-kicker">Where is it?</span>
+                            <h3>Where do you see activity?</h3>
+
+                            <div class="quiz-options">
+                                <button type="button" data-value="Attic">Attic / ceiling</button>
+                                <button type="button" data-value="Roofline">Roofline / vents</button>
+                                <button type="button" data-value="Garage">Garage / crawlspace</button>
+                                <button type="button" data-value="Yard">Yard / exterior</button>
+                            </div>
+                        </div>
+
+                        <div class="quiz-step" data-step="3">
+                            <span class="quiz-kicker">Contact details</span>
+                            <h3>Where should providers contact you?</h3>
+
+                            <div class="quiz-fields">
+                                <input type="text" placeholder="ZIP code" data-quiz-zip>
+                                <input type="tel" placeholder="Phone number" data-quiz-phone>
+                            </div>
+
+                            <p class="quiz-error" data-quiz-error></p>
+
+                            <button type="button" class="quiz-submit">
+                                Request Matches
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>
+                        </div>
+
+                        <p class="quiz-note">
+                            WILD GUARD connects requests with independent providers. We do not perform services
+                            directly.
+                        </p>
                     </div>
 
-                    <p class="quiz-note">
-                        WILD GUARD connects requests with independent providers. We do not perform services directly.
-                    </p>
+                    <aside class="contact-request-helper" aria-label="Request instructions">
+                        <span>Quick checklist</span>
+                        <h3>Before you submit</h3>
+                        <ul>
+                            <li>
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <strong>ZIP code</strong>
+                                    <p>Helps route your request to local provider categories.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="message-square-text"></i>
+                                <div>
+                                    <strong>What you noticed</strong>
+                                    <p>Noises, droppings, sightings, or visible entry points.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="shield-check"></i>
+                                <div>
+                                    <strong>Verify details</strong>
+                                    <p>Ask about licensing, insurance, scope, and follow-up terms.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </section>
