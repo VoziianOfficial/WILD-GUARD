@@ -181,37 +181,33 @@ function initServiceCardsTilt() {
     });
 }
 
+
 /* ==================================================
-   RELATED SERVICES TILT
+   RELATED SERVICES — SAFE ANIMATED HOVER
    ================================================== */
 
 function initRelatedServicesTilt() {
-    const cards = document.querySelectorAll(".related-services-grid a");
+    const cards = document.querySelectorAll(".related-services [data-related-card]");
 
     if (!cards.length) return;
 
-    const canHover = window.matchMedia("(hover: hover)").matches;
-
-    if (!canHover) return;
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
     cards.forEach((card) => {
+        if (!canHover) return;
+
         card.addEventListener("pointermove", (event) => {
             const rect = card.getBoundingClientRect();
-
             const x = event.clientX - rect.left;
             const y = event.clientY - rect.top;
 
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = ((y - centerY) / centerY) * -2.6;
-            const rotateY = ((x - centerX) / centerX) * 2.6;
-
-            card.style.transform = `translateY(-6px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            card.style.setProperty("--mx", `${x}px`);
+            card.style.setProperty("--my", `${y}px`);
         });
 
         card.addEventListener("pointerleave", () => {
-            card.style.transform = "";
+            card.style.setProperty("--mx", "50%");
+            card.style.setProperty("--my", "50%");
         });
     });
 }
