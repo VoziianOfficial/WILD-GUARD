@@ -22,6 +22,7 @@
 
     <!-- Libraries -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -330,11 +331,11 @@
                     </p>
                 </div>
 
-                <div class="contact-steps-grid">
-                    <article data-aos="fade-up">
-                        <span>01</span>
-                        <i data-lucide="message-square-text"></i>
-                        <h3>Submit the concern</h3>
+	                <div class="contact-steps-grid">
+	                    <article data-aos="fade-up">
+	                        <span>01</span>
+	                        <i data-lucide="message-square-text"></i>
+	                        <h3>Submit the concern</h3>
                         <p>
                             Share your ZIP code, the animal type if known, where you noticed activity, and any visible
                             signs.
@@ -368,11 +369,58 @@
                         <p>
                             Compare written details, licensing where required, insurance, methods, fees, and follow-up
                             terms before hiring.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
+	                        </p>
+	                    </article>
+	                </div>
+
+                    <!-- Mobile swiper -->
+                    <div class="contact-steps-slider swiper" data-contact-steps-slider aria-label="Request steps slider">
+                        <div class="contact-steps-slides swiper-wrapper">
+                            <article class="swiper-slide" data-aos="fade-up">
+                                <span>01</span>
+                                <i data-lucide="message-square-text"></i>
+                                <h3>Submit the concern</h3>
+                                <p>
+                                    Share your ZIP code, the animal type if known, where you noticed activity, and any
+                                    visible signs.
+                                </p>
+                            </article>
+
+                            <article class="swiper-slide" data-aos="fade-up" data-aos-delay="80">
+                                <span>02</span>
+                                <i data-lucide="route"></i>
+                                <h3>Request is categorized</h3>
+                                <p>
+                                    The concern can be routed toward relevant provider categories such as wildlife
+                                    removal, raccoons, bats, birds, or exclusion.
+                                </p>
+                            </article>
+
+                            <article class="swiper-slide" data-aos="fade-up" data-aos-delay="160">
+                                <span>03</span>
+                                <i data-lucide="phone-call"></i>
+                                <h3>Providers may contact you</h3>
+                                <p>
+                                    Independent providers may discuss availability, inspection steps, pricing, and
+                                    service details directly.
+                                </p>
+                            </article>
+
+                            <article class="swiper-slide" data-aos="fade-up" data-aos-delay="240">
+                                <span>04</span>
+                                <i data-lucide="file-check-2"></i>
+                                <h3>You review and decide</h3>
+                                <p>
+                                    Compare written details, licensing where required, insurance, methods, fees, and
+                                    follow-up terms before hiring.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="contact-steps-pagination" aria-hidden="true"></div>
+                    </div>
+	            </div>
+	        </section>
 
         <!-- ================= MATCHING GUIDE ================= -->
         <section class="contact-guide-section section-sm" aria-labelledby="contactGuideTitle">
@@ -890,6 +938,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- JS -->
     <script src="./js/config.js"></script>

@@ -8,6 +8,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     initContactHeroMotion();
     initContactMapMotion();
+    initContactStepsSwiper();
     initContactCardsTilt();
     initFormSoftMotion();
 });
@@ -138,6 +139,62 @@ function initContactMapMotion() {
             }
         );
     });
+}
+
+/* ==================================================
+   CONTACT STEPS SWIPER (MOBILE)
+   ================================================== */
+
+let contactStepsSwiper = null;
+
+function initContactStepsSwiper() {
+    const slider = document.querySelector("[data-contact-steps-slider]");
+
+    if (!slider || typeof Swiper === "undefined") return;
+
+    const breakpoint = window.matchMedia("(max-width: 560px)");
+
+    const enableSwiper = () => {
+        if (contactStepsSwiper) return;
+
+        contactStepsSwiper = new Swiper(slider, {
+            loop: true,
+            speed: 650,
+            grabCursor: true,
+            slidesPerView: 1,
+            spaceBetween: 12,
+            watchOverflow: false,
+
+            autoplay: {
+                delay: 2600,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+
+            pagination: {
+                el: ".contact-steps-pagination",
+                clickable: true,
+            },
+        });
+    };
+
+    const disableSwiper = () => {
+        if (!contactStepsSwiper) return;
+
+        contactStepsSwiper.destroy(true, true);
+        contactStepsSwiper = null;
+    };
+
+    const checkMode = () => {
+        if (breakpoint.matches) {
+            enableSwiper();
+        } else {
+            disableSwiper();
+        }
+    };
+
+    checkMode();
+    breakpoint.addEventListener("change", checkMode);
 }
 
 /* ==================================================
