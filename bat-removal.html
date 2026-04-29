@@ -482,95 +482,110 @@
             </div>
         </section>
 
-        <!-- ================= CTA FORM ================= -->
-        <section class="service-match-section section" aria-labelledby="matchTitle">
+        <section class="home-match-section section" aria-labelledby="matchTitle">
+            <div class="home-match-bg" aria-hidden="true"></div>
+        
             <div class="container">
-                <div class="service-match-layout">
-                    <div class="service-match-copy" data-aos="fade-right">
+                <div class="match-shell">
+                    <div class="match-copy" data-aos="fade-right">
                         <span class="section-kicker">
                             <i data-lucide="send"></i>
-                            Free matching request
+                            Free provider matching
                         </span>
-
-                        <h2 id="matchTitle">Request bat removal provider options.</h2>
-
+        
+                        <h2 id="matchTitle">Request local wildlife provider options.</h2>
+        
                         <p>
-                            Share your ZIP code and where you noticed bat activity. WILD GUARD can help connect your
-                            request with independent local providers for comparison.
+                            Tell us what type of wildlife activity you noticed. WILD GUARD can help route your request
+                            toward
+                            independent provider categories that may fit your situation.
                         </p>
-
-                        <div class="service-match-points">
+        
+                        <div class="match-proof-row">
                             <article>
-                                <i data-lucide="shield-check"></i>
-                                <span>Verify provider credentials directly</span>
+                                <i data-lucide="badge-check"></i>
+                                <div>
+                                    <strong>Verify details directly</strong>
+                                    <span>Licensing, insurance, pricing, and service terms.</span>
+                                </div>
                             </article>
-
+        
                             <article>
-                                <i data-lucide="calendar-clock"></i>
-                                <span>Ask about timing and local rules</span>
+                                <i data-lucide="file-text"></i>
+                                <div>
+                                    <strong>Compare before hiring</strong>
+                                    <span>Review scope, timing, methods, and written estimates.</span>
+                                </div>
                             </article>
-
-                            <article>
-                                <i data-lucide="lock-keyhole"></i>
-                                <span>Discuss exclusion and sealing scope</span>
-                            </article>
+                        </div>
+        
+                        <div class="match-soft-note">
+                            <i data-lucide="info"></i>
+                            <span>
+                                WILD GUARD is not a wildlife removal company. Providers are independent.
+                            </span>
                         </div>
                     </div>
-
-                    <form class="form-card service-form" action="#" method="post" data-contact-form
-                        data-aos="fade-left">
-                        <div class="form-card-head">
-                            <span>Start here</span>
-                            <h3>Compare Providers</h3>
+        
+                    <form class="wild-match-form" action="#" method="post" data-contact-form data-aos="fade-left">
+                        <div class="wild-form-top">
+                            <div>
+                                <span class="wild-form-kicker">Start here</span>
+                                <h3>Compare Local Providers</h3>
+                                <p>Share a few details so your request can be routed more clearly.</p>
+                            </div>
                         </div>
-
-                        <div class="form-grid">
-                            <label class="form-field">
+        
+                        <div class="wild-form-fields">
+                            <label class="wild-field">
                                 <span>Full Name</span>
                                 <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
                             </label>
-
-                            <label class="form-field">
+        
+                            <label class="wild-field">
                                 <span>Phone Number</span>
-                                <input type="tel" name="phone" placeholder="(555) 000-0000" autocomplete="tel"
-                                    required />
+                                <input type="tel" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required />
                             </label>
-
-                            <label class="form-field">
+        
+                            <label class="wild-field">
                                 <span>Email Address</span>
                                 <input type="email" name="email" placeholder="you@example.com" autocomplete="email" />
                             </label>
-
-                            <label class="form-field">
+        
+                            <label class="wild-field">
                                 <span>ZIP Code</span>
-                                <input type="text" name="zip" placeholder="ZIP code" autocomplete="postal-code"
-                                    required />
+                                <input type="text" name="zip" placeholder="ZIP code" autocomplete="postal-code" required />
+                            </label>
+        
+                            <label class="wild-field">
+                                <span>Wildlife Concern</span>
+                                <select name="service" required>
+                                    <option value="">Select a concern</option>
+                                    <option value="wildlife-activity">Wildlife activity</option>
+                                    <option value="raccoons">Raccoons</option>
+                                    <option value="squirrels">Squirrels</option>
+                                    <option value="bats">Bats</option>
+                                    <option value="birds">Birds</option>
+                                    <option value="entry-points">Entry point sealing</option>
+                                    <option value="not-sure">Not sure yet</option>
+                                </select>
+                            </label>
+        
+                            <label class="wild-field">
+                                <span>Brief Description</span>
+                                <textarea name="message" rows="3"></textarea>
                             </label>
                         </div>
-
-                        <label class="form-field">
-                            <span>Wildlife Concern</span>
-                            <select name="service" required>
-                                <option value="bats">Bats</option>
-                                <option value="attic-activity">Attic activity</option>
-                                <option value="dusk-activity">Dusk activity</option>
-                                <option value="roofline-gaps">Roofline gaps</option>
-                                <option value="entry-points">Entry point sealing</option>
-                                <option value="not-sure">Not sure yet</option>
-                            </select>
-                        </label>
-
-                        <label class="form-field">
-                            <span>Brief Description</span>
-                            <textarea name="message" rows="4"></textarea>
-                        </label>
-
-                  
-
-                        <button class="btn btn-primary form-submit" type="submit">
+        
+        
+                        <button class="btn btn-primary wild-form-submit" type="submit">
                             Request Provider Matches
                             <i data-lucide="arrow-up-right"></i>
                         </button>
+        
+                        <p class="wild-form-disclaimer">
+                            No direct wildlife services are performed by WILD GUARD.
+                        </p>
                     </form>
                 </div>
             </div>
