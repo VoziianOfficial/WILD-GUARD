@@ -563,7 +563,7 @@
     position: relative;
     overflow: hidden;
     min-height: 278px;
-    padding: 22px;
+    padding: 22px 64px 22px 22px;
     border: 1px solid var(--color-border);
     border-radius: 30px;
     background: var(--color-card);
@@ -617,7 +617,9 @@
 
 .contact-steps-grid svg,
 .contact-steps-slider svg {
-    position: relative;
+    position: absolute;
+    top: 16px;
+    right: 16px;
     z-index: 1;
     width: 46px;
     height: 46px;
@@ -1581,14 +1583,18 @@
 }
 
 .contact-prep-grid article {
+    position: relative;
     min-height: 150px;
-    padding: 16px;
+    padding: 16px 60px 16px 16px;
     border: 1px solid rgba(63, 79, 55, 0.12);
     border-radius: 22px;
     background: rgba(247, 246, 241, 0.72);
 }
 
 .contact-prep-grid svg {
+    position: absolute;
+    top: 14px;
+    right: 14px;
     width: 38px;
     height: 38px;
     padding: 9px;

@@ -357,7 +357,7 @@
     position: relative;
     overflow: hidden;
     min-height: 184px;
-    padding: 20px;
+    padding: 20px 62px 20px 20px;
     border: 1px solid var(--color-border);
     border-radius: 28px;
     background:
@@ -408,6 +408,19 @@
     color: var(--color-text-light);
     font-size: 11px;
     font-weight: 900;
+}
+
+.compare-framework-list svg {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    border-radius: 50%;
+    background: rgba(28, 36, 25, 0.9);
+    color: var(--color-text-light);
 }
 
 .compare-framework-list article div {
@@ -463,7 +476,7 @@
 
     .compare-framework-list article {
         min-height: auto;
-        padding: 18px;
+        padding: 18px 58px 18px 18px;
         border-radius: 22px;
     }
 
@@ -493,7 +506,7 @@
     position: relative;
     overflow: hidden;
     min-height: 248px;
-    padding: 22px;
+    padding: 22px 64px 22px 22px;
     border: 1px solid var(--color-border);
     border-radius: 30px;
     background:
@@ -533,7 +546,9 @@
 }
 
 .provider-fit-grid svg {
-    position: relative;
+    position: absolute;
+    top: 16px;
+    right: 16px;
     z-index: 1;
     width: 46px;
     height: 46px;
@@ -1858,14 +1873,18 @@
 }
 
 .request-checklist-grid article {
+    position: relative;
     min-height: 150px;
-    padding: 16px;
+    padding: 16px 60px 16px 16px;
     border: 1px solid rgba(63, 79, 55, 0.12);
     border-radius: 22px;
     background: rgba(247, 246, 241, 0.72);
 }
 
 .request-checklist-grid svg {
+    position: absolute;
+    top: 14px;
+    right: 14px;
     width: 38px;
     height: 38px;
     padding: 9px;

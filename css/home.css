@@ -1089,12 +1089,10 @@
 }
 
 .signal-cards article {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: start;
-    gap: 11px;
+    position: relative;
+    display: block;
     min-height: 88px;
-    padding: 12px;
+    padding: 12px 54px 12px 12px;
     border: 1px solid var(--color-border);
     border-radius: 19px;
     background: rgba(255, 255, 255, 0.66);
@@ -1109,6 +1107,9 @@
 }
 
 .signal-cards svg {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     width: 34px;
     height: 34px;
     padding: 9px;
@@ -2473,7 +2474,7 @@
 
     .signal-cards article {
         min-height: auto;
-        padding: 12px;
+        padding: 12px 54px 12px 12px;
     }
 
     .signal-cards span {

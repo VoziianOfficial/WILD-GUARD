@@ -420,7 +420,7 @@
     position: relative;
     overflow: hidden;
     min-height: 278px;
-    padding: 22px;
+    padding: 22px 64px 22px 22px;
     border: 1px solid var(--color-border);
     border-radius: 30px;
     background:
@@ -478,7 +478,9 @@
 }
 
 .about-model-grid svg {
-    position: relative;
+    position: absolute;
+    top: 16px;
+    right: 16px;
     z-index: 1;
     width: 48px;
     height: 48px;
@@ -686,7 +688,7 @@
 /* карточка = тонкая плашка */
 .about-help-steps article {
     position: relative;
-    padding: 14px 16px;
+    padding: 14px 56px 14px 16px;
 
     border-radius: 14px;
     border: 1px solid rgba(0, 0, 0, 0.06);
@@ -694,6 +696,18 @@
     background: rgba(255, 255, 255, 0.6);
 
     transition: all 0.25s ease;
+}
+
+.about-help-steps svg {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    border-radius: 50%;
+    background: rgba(28, 36, 25, 0.92);
+    color: rgba(247, 246, 241, 0.92);
 }
 
 /* линия сверху */
@@ -1091,8 +1105,15 @@
 
     /* карточки компактнее */
     .about-help-steps article {
-        padding: 10px 12px;
+        padding: 10px 48px 10px 12px;
         border-radius: 12px;
+    }
+
+    .about-help-steps svg {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     .about-help-steps h3 {
