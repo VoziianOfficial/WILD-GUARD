@@ -137,6 +137,10 @@
         min-height: 520px;
     }
 
+    .home-hero .container.home-hero-inner {
+        width: min(calc(100% - 24px), var(--container));
+    }
+
     .home-hero-copy h1 {
         font-size: clamp(38px, 12vw, 52px);
     }

@@ -1644,6 +1644,10 @@
 
 /* mobile */
 @media (max-width: 560px) {
+    .service-clarity.section-sm {
+        display: none !important;
+    }
+
     .service-clarity-photo {
         min-height: 180px;
     }
@@ -1753,7 +1757,7 @@
 @media (max-width: 560px) {
     .services-page .services-hero-inner {
         min-height: 540px !important;
-        padding-block: 88px 34px !important;
+        padding-block: 44px 34px !important;
     }
 
     .services-page .services-hero-copy {
